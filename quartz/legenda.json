@@ -8,7 +8,8 @@
     "legenda": {
       "nat": "number of atoms",
       "nbands": "number of bands",
-      "npw": "PW cut off energy",
+      "ecutwfc": "cut off energy for wave functions",
+      "ecutrho": "cut off energy for charge density", 
       "vol": "Volume of the cell",
       "Dense_grid": "Dimensions of dense FFT grid",
       "Smooth_grid": "Dimensions of smooth FFT grid",

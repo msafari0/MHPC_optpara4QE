@@ -104,7 +104,8 @@
     "dims": {
       "nat": 2304,
       "nbands": 6144,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 195269.188,
       "Dense_grid": {
         "ngrid_vecs": 18875837,
@@ -334,7 +335,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -564,7 +566,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -794,7 +797,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -1024,7 +1028,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -1254,7 +1259,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -1484,7 +1490,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -1710,7 +1717,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -1940,7 +1948,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -2170,7 +2179,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -2400,7 +2410,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -2626,7 +2637,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -2856,7 +2868,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -3082,7 +3095,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -3312,7 +3326,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -3542,7 +3557,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -3772,7 +3788,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -4002,7 +4019,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -4232,7 +4250,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -4462,7 +4481,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -4692,7 +4712,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -4918,7 +4939,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -5148,7 +5170,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -5378,7 +5401,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -5604,7 +5628,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -5834,7 +5859,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -6064,7 +6090,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -6294,7 +6321,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -6520,7 +6548,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -6750,7 +6779,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -6976,7 +7006,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -7202,7 +7233,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -7432,7 +7464,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -7658,7 +7691,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -7888,7 +7922,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -8118,7 +8153,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -8348,7 +8384,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -8578,7 +8615,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -8808,7 +8846,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -9038,7 +9077,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -9268,7 +9308,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -9498,7 +9539,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -9728,7 +9770,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -9958,7 +10001,8 @@
     "dims": {
       "nat": 288,
       "nbands": 768,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 24408.5075,
       "Dense_grid": {
         "ngrid_vecs": 2359307,
@@ -10188,7 +10232,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -10418,7 +10463,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -10648,7 +10694,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -10878,7 +10925,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -11108,7 +11156,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -11338,7 +11387,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -11564,7 +11614,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -11790,7 +11841,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -12020,7 +12072,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -12250,7 +12303,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -12480,7 +12534,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -12710,7 +12765,8 @@
     "dims": {
       "nat": 1152,
       "nbands": 3072,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 97634.5934,
       "Dense_grid": {
         "ngrid_vecs": 9438265,
@@ -12940,7 +12996,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -13170,7 +13227,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -13400,7 +13458,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -13630,7 +13689,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -13860,7 +13920,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -14090,7 +14151,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -14320,7 +14382,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -14550,7 +14613,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -14780,7 +14844,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -15010,7 +15075,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -15240,7 +15306,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -15470,7 +15537,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -15700,7 +15768,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -15930,7 +15999,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -16160,7 +16230,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -16390,7 +16461,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -16620,7 +16692,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -16850,7 +16923,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -17080,7 +17154,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -17310,7 +17385,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -17540,7 +17616,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -17770,7 +17847,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -18000,7 +18078,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -18230,7 +18309,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -18460,7 +18540,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -18690,7 +18771,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -18920,7 +19002,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -19150,7 +19233,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -19380,7 +19464,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -19610,7 +19695,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -19840,7 +19926,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -20070,7 +20157,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -20300,7 +20388,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -20530,7 +20619,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -20760,7 +20850,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -20990,7 +21081,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -21220,7 +21312,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -21450,7 +21543,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -21680,7 +21774,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -21910,7 +22005,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -22140,7 +22236,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -22370,7 +22467,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -22600,7 +22698,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -22830,7 +22929,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -23060,7 +23160,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -23290,7 +23391,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -23520,7 +23622,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -23750,7 +23853,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -23980,7 +24084,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -24210,7 +24315,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -24440,7 +24546,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -24670,7 +24777,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -24900,7 +25008,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -25130,7 +25239,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -25360,7 +25470,8 @@
     "dims": {
       "nat": 144,
       "nbands": 384,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 12204.2538,
       "Dense_grid": {
         "ngrid_vecs": 1179671,
@@ -25590,7 +25701,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -25820,7 +25932,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -26044,7 +26157,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -26274,7 +26388,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -26504,7 +26619,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -26734,7 +26850,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -26964,7 +27081,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -27184,7 +27302,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -27414,7 +27533,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -27644,7 +27764,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -27874,7 +27995,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -28098,7 +28220,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -28328,7 +28451,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -28558,7 +28682,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -28784,7 +28909,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -29014,7 +29140,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -29244,7 +29371,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -29474,7 +29602,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -29698,7 +29827,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -29928,7 +30058,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -30158,7 +30289,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -30388,7 +30520,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -30618,7 +30751,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -30848,7 +30982,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -31074,7 +31209,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -31294,7 +31430,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -31524,7 +31661,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -31748,7 +31886,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -31978,7 +32117,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -32204,7 +32344,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -32434,7 +32575,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -32658,7 +32800,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -32888,7 +33031,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -33112,7 +33256,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -33338,7 +33483,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -33562,7 +33708,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -33792,7 +33939,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -34022,7 +34170,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -34252,7 +34401,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -34482,7 +34632,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -34712,7 +34863,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -34942,7 +35094,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -35172,7 +35325,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -35402,7 +35556,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -35632,7 +35787,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -35862,7 +36018,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -36092,7 +36249,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -36322,7 +36480,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -36546,7 +36705,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -36776,7 +36936,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -37000,7 +37161,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -37230,7 +37392,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -37460,7 +37623,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -37690,7 +37854,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -37920,7 +38085,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -38150,7 +38316,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -38380,7 +38547,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -38610,7 +38778,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -38840,7 +39009,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -39070,7 +39240,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -39300,7 +39471,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -39530,7 +39702,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -39760,7 +39933,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -39990,7 +40164,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -40220,7 +40395,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -40450,7 +40626,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -40680,7 +40857,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -40910,7 +41088,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -41134,7 +41313,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -41364,7 +41544,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -41594,7 +41775,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -41824,7 +42006,8 @@
     "dims": {
       "nat": 72,
       "nbands": 192,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 6102.1269,
       "Dense_grid": {
         "ngrid_vecs": 589599,
@@ -42054,7 +42237,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -42284,7 +42468,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -42510,7 +42695,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -42740,7 +42926,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -42970,7 +43157,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -43196,7 +43384,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -43422,7 +43611,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -43652,7 +43842,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -43882,7 +44073,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -44112,7 +44304,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -44342,7 +44535,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -44572,7 +44766,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
@@ -44802,7 +44997,8 @@
     "dims": {
       "nat": 576,
       "nbands": 1536,
-      "npw": 40.0,
+      "ecutwfc": 40.0,
+      "ecutrho": 320.0,
       "vol": 48817.2967,
       "Dense_grid": {
         "ngrid_vecs": 4718965,
