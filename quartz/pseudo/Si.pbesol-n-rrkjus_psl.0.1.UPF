@@ -25,7 +25,7 @@
 
     Pseudization used: troullier-martins
 <PP_INPUTFILE>
- &input
+ input
    title='Si',
    zed=14.0,
    rel=1,
@@ -33,7 +33,7 @@
    iswitch=3,
    dft='PBESOL'
  /
- &inputp
+ inputp
    pseudotype=3,
    file_pseudopw='Si.pbesol-n-rrkjus_psl.0.1.UPF',
    author='ADC',
