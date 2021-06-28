@@ -1,0 +1,41 @@
+&control
+calculation='scf'
+prefix='003'
+outdir='./'
+pseudo_dir='./'
+tprnfor=.true.
+verbosity='high'
+/
+&system
+ ibrav = 1
+ A = 7.502 
+ nat=15
+ ntyp=2
+ ecutwfc=60
+ ecutrho=480 
+ occupations='fixed'
+/
+&electrons
+startingpot='atomic'
+conv_thr=1.d-10
+/
+ATOMIC_SPECIES
+'H'  1.    'H.pbe-rrkjus_psl.1.0.0.UPF' 
+'O'  16.   'O.pbe-n-kjpaw_psl.0.1.UPF' 
+ATOMIC_POSITIONS angstrom 
+O       -0.26092        1.15914      1.74675 
+H       -0.74572        0.30094      1.57775 
+H       -0.92332        1.88514      1.92875 
+O       -1.27092       -1.16366     -1.72715 
+H       -0.29282       -1.02896     -1.56855 
+H       -1.65312       -0.34936     -2.16395 
+O       -2.00462       -1.15896      0.95275 
+H       -2.90212       -0.79726      1.20475 
+H       -1.88092       -1.08366     -0.03715 
+O        2.28508        1.87514      0.47925 
+H        2.60008        2.69414      0.95875 
+H        1.48108        1.50414      0.94475 
+O        1.59008       -1.35976     -1.16585 
+H        1.82908       -0.44206     -1.48325 
+H        2.14908       -2.03496     -1.64755 
+K_POINTS gamma 
