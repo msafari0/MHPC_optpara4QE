@@ -12247,6 +12247,239 @@
     }
   },
   {
+    "output": "../acque/aqua11/out_aqua11_np192:_nt4:ndmax_nt2_9573522",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 8.48,
+      "electrons": 166.84,
+      "forces": 1.72,
+      "wfcinit": 4.11,
+      "wfcinit:atom": 0.02,
+      "wfcinit:wfcr": 3.96,
+      "potinit": 0.27,
+      "hinit0": 0.39,
+      "c_bands": 140.88,
+      "sum_band": 17.99,
+      "v_of_rho": 2.24,
+      "v_h": 0.24,
+      "v_xc": 2.07,
+      "newd": 4.13,
+      "PAW_pot": 0.43,
+      "mix_rho": 0.72,
+      "init_us_2": 0.49,
+      "regterg": 139.87,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 13.84,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.23,
+      "sum_band:cal": 2.61,
+      "sum_band:bec": 0.12,
+      "addusdens": 3.49,
+      "addusd:skk": 2.44,
+      "addusd:dgemm": 0.79,
+      "addusd:qvan2": 0.16,
+      "rdiaghg": 20.82,
+      "regterg:over": 7.17,
+      "regterg:upda": 12.87,
+      "regterg:last": 21.94,
+      "rdiaghg:chol": 0.66,
+      "rdiaghg:inve": 0.05,
+      "rdiaghg:para": 1.15,
+      "h_psi": 71.53,
+      "s_psi": 5.59,
+      "g_psi": 0.09,
+      "h_psi:calbec": 6.89,
+      "vloc_psi": 58.89,
+      "vloc_psi:tg_": 0.1,
+      "add_vuspsi": 5.58,
+      "calbec": 9.95,
+      "fft": 2.57,
+      "ffts": 0.29,
+      "fftw": 62.32,
+      "interpolate": 0.33,
+      "fft_scatt_xy": 3.54,
+      "fft_scatt_yz": 44.72,
+      "fft_scatt_tg": 5.01,
+      "PWSCF": 195.59
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 79.0,
+      "regterg:over": 58.0,
+      "regterg:upda": 58.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 79.0,
+      "rdiaghg:inve": 79.0,
+      "rdiaghg:para": 158.0,
+      "h_psi": 80.0,
+      "s_psi": 80.0,
+      "g_psi": 58.0,
+      "h_psi:calbec": 80.0,
+      "vloc_psi": 80.0,
+      "vloc_psi:tg_": 80.0,
+      "add_vuspsi": 80.0,
+      "calbec": 105.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 26454.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 26746.0,
+      "fft_scatt_yz": 26746.0,
+      "fft_scatt_tg": 26454.0
+    },
+    "dims": {
+      "nat": 570,
+      "nbands": 760,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 92556.2521,
+      "Dense_grid": {
+        "ngrid_vecs": 8218634,
+        "fft_dims": [
+          320,
+          320,
+          320
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 2905922,
+        "fft_dims": [
+          225,
+          225,
+          225
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 4,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        2,
+        96
+      ],
+      "taskgroups": true,
+      "ndiag": 169
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        121.68,
+        "MB"
+      ],
+      "max_per_process": [
+        893.69,
+        "MB"
+      ],
+      "total": [
+        167.57,
+        "GB"
+      ],
+      "wfc": [
+        21.93,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        21.93,
+        "MB"
+      ],
+      "str. fact": [
+        1.31,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        65.79,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        6.65,
+        "MB"
+      ],
+      "rhoin": [
+        2.22,
+        "MB"
+      ],
+      "rho*nmix": [
+        10.45,
+        "MB"
+      ],
+      "G-vectors": [
+        2.56,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        0.31,
+        "MB"
+      ],
+      "<psi|beta>": [
+        13.22,
+        "MB"
+      ],
+      "psi": [
+        43.86,
+        "MB"
+      ],
+      "hpsi": [
+        43.86,
+        "MB"
+      ],
+      "spsi": [
+        43.86,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        95.54,
+        "MB"
+      ],
+      "addusdens": [
+        276.28,
+        "MB"
+      ],
+      "addusforce": [
+        772.01,
+        "MB"
+      ]
+    }
+  },
+  {
     "output": "../acque/aqua11/out_aqua11_np192:_nt2:ndmax_nt2_9557588",
     "algo": "davidson",
     "clocks": {
@@ -14344,6 +14577,239 @@
     }
   },
   {
+    "output": "../acque/aqua11/out_aqua11_np192:_nt4:nd36_nt2_9573522",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 6.84,
+      "electrons": 150.4,
+      "forces": 1.71,
+      "wfcinit": 2.56,
+      "wfcinit:atom": 0.02,
+      "wfcinit:wfcr": 2.4,
+      "potinit": 0.25,
+      "hinit0": 0.32,
+      "c_bands": 126.5,
+      "sum_band": 16.36,
+      "v_of_rho": 2.05,
+      "v_h": 0.23,
+      "v_xc": 1.89,
+      "newd": 4.02,
+      "PAW_pot": 0.42,
+      "mix_rho": 0.59,
+      "init_us_2": 0.48,
+      "regterg": 125.48,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 12.47,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.22,
+      "sum_band:cal": 2.37,
+      "sum_band:bec": 0.11,
+      "addusdens": 3.48,
+      "addusd:skk": 2.43,
+      "addusd:dgemm": 0.79,
+      "addusd:qvan2": 0.16,
+      "rdiaghg": 17.46,
+      "regterg:over": 7.71,
+      "regterg:upda": 6.76,
+      "regterg:last": 13.83,
+      "rdiaghg:chol": 0.48,
+      "rdiaghg:inve": 0.58,
+      "rdiaghg:para": 0.72,
+      "h_psi": 73.26,
+      "s_psi": 5.63,
+      "g_psi": 0.09,
+      "h_psi:calbec": 6.94,
+      "vloc_psi": 60.37,
+      "vloc_psi:tg_": 0.1,
+      "add_vuspsi": 5.79,
+      "calbec": 9.77,
+      "fft": 2.17,
+      "ffts": 0.18,
+      "fftw": 62.75,
+      "interpolate": 0.3,
+      "fft_scatt_xy": 3.41,
+      "fft_scatt_yz": 44.91,
+      "fft_scatt_tg": 4.91,
+      "PWSCF": 167.99
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 79.0,
+      "regterg:over": 58.0,
+      "regterg:upda": 58.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 79.0,
+      "rdiaghg:inve": 79.0,
+      "rdiaghg:para": 158.0,
+      "h_psi": 80.0,
+      "s_psi": 80.0,
+      "g_psi": 58.0,
+      "h_psi:calbec": 80.0,
+      "vloc_psi": 80.0,
+      "vloc_psi:tg_": 80.0,
+      "add_vuspsi": 80.0,
+      "calbec": 105.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 26454.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 26746.0,
+      "fft_scatt_yz": 26746.0,
+      "fft_scatt_tg": 26454.0
+    },
+    "dims": {
+      "nat": 570,
+      "nbands": 760,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 92556.2521,
+      "Dense_grid": {
+        "ngrid_vecs": 8218634,
+        "fft_dims": [
+          320,
+          320,
+          320
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 2905922,
+        "fft_dims": [
+          225,
+          225,
+          225
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 4,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        2,
+        96
+      ],
+      "taskgroups": true,
+      "ndiag": 36
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        121.68,
+        "MB"
+      ],
+      "max_per_process": [
+        893.69,
+        "MB"
+      ],
+      "total": [
+        167.57,
+        "GB"
+      ],
+      "wfc": [
+        21.93,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        21.93,
+        "MB"
+      ],
+      "str. fact": [
+        1.31,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        65.79,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        6.65,
+        "MB"
+      ],
+      "rhoin": [
+        2.22,
+        "MB"
+      ],
+      "rho*nmix": [
+        10.45,
+        "MB"
+      ],
+      "G-vectors": [
+        2.56,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        1.47,
+        "MB"
+      ],
+      "<psi|beta>": [
+        13.22,
+        "MB"
+      ],
+      "psi": [
+        43.86,
+        "MB"
+      ],
+      "hpsi": [
+        43.86,
+        "MB"
+      ],
+      "spsi": [
+        43.86,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        95.54,
+        "MB"
+      ],
+      "addusdens": [
+        276.28,
+        "MB"
+      ],
+      "addusforce": [
+        772.01,
+        "MB"
+      ]
+    }
+  },
+  {
     "output": "../acque/aqua11/out_aqua11_np96:_nt2:nd64_nt2_9571049",
     "algo": "davidson",
     "clocks": {
@@ -14805,6 +15271,472 @@
       ],
       "addusforce": [
         3084.8,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua11/out_aqua11_np192:_nt4:nd36_nt4_9573522",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 6.4,
+      "electrons": 126.35,
+      "forces": 1.68,
+      "wfcinit": 2.18,
+      "wfcinit:atom": 0.02,
+      "wfcinit:wfcr": 2.02,
+      "potinit": 0.23,
+      "hinit0": 0.27,
+      "c_bands": 102.93,
+      "sum_band": 15.94,
+      "v_of_rho": 1.77,
+      "v_h": 0.2,
+      "v_xc": 1.64,
+      "newd": 4.33,
+      "PAW_pot": 0.43,
+      "mix_rho": 0.54,
+      "init_us_2": 0.47,
+      "regterg": 101.91,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 11.98,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.22,
+      "sum_band:cal": 2.44,
+      "sum_band:bec": 0.11,
+      "addusdens": 3.51,
+      "addusd:skk": 2.46,
+      "addusd:dgemm": 0.79,
+      "addusd:qvan2": 0.16,
+      "rdiaghg": 17.33,
+      "regterg:over": 6.34,
+      "regterg:upda": 5.2,
+      "regterg:last": 11.8,
+      "rdiaghg:chol": 0.49,
+      "rdiaghg:inve": 0.57,
+      "rdiaghg:para": 0.75,
+      "h_psi": 54.45,
+      "s_psi": 5.6,
+      "g_psi": 0.1,
+      "h_psi:calbec": 6.89,
+      "vloc_psi": 41.62,
+      "vloc_psi:tg_": 0.22,
+      "add_vuspsi": 5.77,
+      "calbec": 9.77,
+      "fft": 1.85,
+      "ffts": 0.22,
+      "fftw": 43.61,
+      "interpolate": 0.25,
+      "fft_scatt_xy": 3.47,
+      "fft_scatt_yz": 25.46,
+      "fft_scatt_tg": 6.15,
+      "PWSCF": 143.45
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 79.0,
+      "regterg:over": 58.0,
+      "regterg:upda": 58.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 79.0,
+      "rdiaghg:inve": 79.0,
+      "rdiaghg:para": 158.0,
+      "h_psi": 80.0,
+      "s_psi": 80.0,
+      "g_psi": 58.0,
+      "h_psi:calbec": 80.0,
+      "vloc_psi": 80.0,
+      "vloc_psi:tg_": 80.0,
+      "add_vuspsi": 80.0,
+      "calbec": 105.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 13287.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 13579.0,
+      "fft_scatt_yz": 13579.0,
+      "fft_scatt_tg": 13287.0
+    },
+    "dims": {
+      "nat": 570,
+      "nbands": 760,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 92556.2521,
+      "Dense_grid": {
+        "ngrid_vecs": 8218634,
+        "fft_dims": [
+          320,
+          320,
+          320
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 2905922,
+        "fft_dims": [
+          225,
+          225,
+          225
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 4,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        4,
+        48
+      ],
+      "taskgroups": true,
+      "ndiag": 36
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        119.92,
+        "MB"
+      ],
+      "max_per_process": [
+        891.9,
+        "MB"
+      ],
+      "total": [
+        167.23,
+        "GB"
+      ],
+      "wfc": [
+        21.93,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        21.93,
+        "MB"
+      ],
+      "str. fact": [
+        1.31,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        65.79,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        6.06,
+        "MB"
+      ],
+      "rhoin": [
+        2.02,
+        "MB"
+      ],
+      "rho*nmix": [
+        10.45,
+        "MB"
+      ],
+      "G-vectors": [
+        2.56,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        1.47,
+        "MB"
+      ],
+      "<psi|beta>": [
+        13.22,
+        "MB"
+      ],
+      "psi": [
+        43.86,
+        "MB"
+      ],
+      "hpsi": [
+        43.86,
+        "MB"
+      ],
+      "spsi": [
+        43.86,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        95.54,
+        "MB"
+      ],
+      "addusdens": [
+        276.27,
+        "MB"
+      ],
+      "addusforce": [
+        771.98,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua11/out_aqua11_np192:_nt4:nd81_nt4_9573522",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 7.02,
+      "electrons": 127.99,
+      "forces": 1.81,
+      "wfcinit": 2.72,
+      "wfcinit:atom": 0.02,
+      "wfcinit:wfcr": 2.56,
+      "potinit": 0.23,
+      "hinit0": 0.32,
+      "c_bands": 106.05,
+      "sum_band": 14.83,
+      "v_of_rho": 1.78,
+      "v_h": 0.2,
+      "v_xc": 1.65,
+      "newd": 4.0,
+      "PAW_pot": 0.43,
+      "mix_rho": 0.5,
+      "init_us_2": 0.47,
+      "regterg": 105.03,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 10.97,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.22,
+      "sum_band:cal": 2.4,
+      "sum_band:bec": 0.11,
+      "addusdens": 3.49,
+      "addusd:skk": 2.43,
+      "addusd:dgemm": 0.8,
+      "addusd:qvan2": 0.16,
+      "rdiaghg": 17.21,
+      "regterg:over": 6.18,
+      "regterg:upda": 7.76,
+      "regterg:last": 14.64,
+      "rdiaghg:chol": 0.48,
+      "rdiaghg:inve": 0.34,
+      "rdiaghg:para": 0.68,
+      "h_psi": 52.86,
+      "s_psi": 5.5,
+      "g_psi": 0.09,
+      "h_psi:calbec": 6.89,
+      "vloc_psi": 40.2,
+      "vloc_psi:tg_": 0.19,
+      "add_vuspsi": 5.59,
+      "calbec": 9.74,
+      "fft": 1.84,
+      "ffts": 0.16,
+      "fftw": 41.11,
+      "interpolate": 0.26,
+      "fft_scatt_xy": 3.41,
+      "fft_scatt_yz": 25.04,
+      "fft_scatt_tg": 3.92,
+      "PWSCF": 145.81
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 79.0,
+      "regterg:over": 58.0,
+      "regterg:upda": 58.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 79.0,
+      "rdiaghg:inve": 79.0,
+      "rdiaghg:para": 158.0,
+      "h_psi": 80.0,
+      "s_psi": 80.0,
+      "g_psi": 58.0,
+      "h_psi:calbec": 80.0,
+      "vloc_psi": 80.0,
+      "vloc_psi:tg_": 80.0,
+      "add_vuspsi": 80.0,
+      "calbec": 105.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 13287.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 13579.0,
+      "fft_scatt_yz": 13579.0,
+      "fft_scatt_tg": 13287.0
+    },
+    "dims": {
+      "nat": 570,
+      "nbands": 760,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 92556.2521,
+      "Dense_grid": {
+        "ngrid_vecs": 8218634,
+        "fft_dims": [
+          320,
+          320,
+          320
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 2905922,
+        "fft_dims": [
+          225,
+          225,
+          225
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 4,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        4,
+        48
+      ],
+      "taskgroups": true,
+      "ndiag": 81
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        119.92,
+        "MB"
+      ],
+      "max_per_process": [
+        891.9,
+        "MB"
+      ],
+      "total": [
+        167.23,
+        "GB"
+      ],
+      "wfc": [
+        21.93,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        21.93,
+        "MB"
+      ],
+      "str. fact": [
+        1.31,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        65.79,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        6.06,
+        "MB"
+      ],
+      "rhoin": [
+        2.02,
+        "MB"
+      ],
+      "rho*nmix": [
+        10.45,
+        "MB"
+      ],
+      "G-vectors": [
+        2.56,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        0.65,
+        "MB"
+      ],
+      "<psi|beta>": [
+        13.22,
+        "MB"
+      ],
+      "psi": [
+        43.86,
+        "MB"
+      ],
+      "hpsi": [
+        43.86,
+        "MB"
+      ],
+      "spsi": [
+        43.86,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        95.54,
+        "MB"
+      ],
+      "addusdens": [
+        276.27,
+        "MB"
+      ],
+      "addusforce": [
+        771.98,
         "MB"
       ]
     }
@@ -15476,6 +16408,239 @@
       ],
       "h,s,v(r/c)": [
         0.65,
+        "MB"
+      ],
+      "<psi|beta>": [
+        13.22,
+        "MB"
+      ],
+      "psi": [
+        43.86,
+        "MB"
+      ],
+      "hpsi": [
+        43.86,
+        "MB"
+      ],
+      "spsi": [
+        43.86,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        95.54,
+        "MB"
+      ],
+      "addusdens": [
+        276.27,
+        "MB"
+      ],
+      "addusforce": [
+        771.98,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua11/out_aqua11_np192:_nt4:ndmax_nt4_9573522",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 8.11,
+      "electrons": 144.43,
+      "forces": 1.68,
+      "wfcinit": 3.88,
+      "wfcinit:atom": 0.02,
+      "wfcinit:wfcr": 3.72,
+      "potinit": 0.23,
+      "hinit0": 0.34,
+      "c_bands": 122.7,
+      "sum_band": 14.57,
+      "v_of_rho": 1.79,
+      "v_h": 0.2,
+      "v_xc": 1.65,
+      "newd": 4.03,
+      "PAW_pot": 0.41,
+      "mix_rho": 0.5,
+      "init_us_2": 0.47,
+      "regterg": 121.67,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 10.63,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.22,
+      "sum_band:cal": 2.42,
+      "sum_band:bec": 0.11,
+      "addusdens": 3.47,
+      "addusd:skk": 2.41,
+      "addusd:dgemm": 0.8,
+      "addusd:qvan2": 0.16,
+      "rdiaghg": 20.7,
+      "regterg:over": 6.5,
+      "regterg:upda": 12.77,
+      "regterg:last": 21.83,
+      "rdiaghg:chol": 1.25,
+      "rdiaghg:inve": 0.04,
+      "rdiaghg:para": 1.08,
+      "h_psi": 53.46,
+      "s_psi": 5.49,
+      "g_psi": 0.1,
+      "h_psi:calbec": 6.99,
+      "vloc_psi": 40.66,
+      "vloc_psi:tg_": 0.19,
+      "add_vuspsi": 5.63,
+      "calbec": 9.86,
+      "fft": 1.91,
+      "ffts": 0.15,
+      "fftw": 41.2,
+      "interpolate": 0.24,
+      "fft_scatt_xy": 3.75,
+      "fft_scatt_yz": 24.92,
+      "fft_scatt_tg": 3.92,
+      "PWSCF": 163.36
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 79.0,
+      "regterg:over": 58.0,
+      "regterg:upda": 58.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 79.0,
+      "rdiaghg:inve": 79.0,
+      "rdiaghg:para": 158.0,
+      "h_psi": 80.0,
+      "s_psi": 80.0,
+      "g_psi": 58.0,
+      "h_psi:calbec": 80.0,
+      "vloc_psi": 80.0,
+      "vloc_psi:tg_": 80.0,
+      "add_vuspsi": 80.0,
+      "calbec": 105.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 13287.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 13579.0,
+      "fft_scatt_yz": 13579.0,
+      "fft_scatt_tg": 13287.0
+    },
+    "dims": {
+      "nat": 570,
+      "nbands": 760,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 92556.2521,
+      "Dense_grid": {
+        "ngrid_vecs": 8218634,
+        "fft_dims": [
+          320,
+          320,
+          320
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 2905922,
+        "fft_dims": [
+          225,
+          225,
+          225
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 4,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        4,
+        48
+      ],
+      "taskgroups": true,
+      "ndiag": 169
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        119.92,
+        "MB"
+      ],
+      "max_per_process": [
+        891.9,
+        "MB"
+      ],
+      "total": [
+        167.23,
+        "GB"
+      ],
+      "wfc": [
+        21.93,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        21.93,
+        "MB"
+      ],
+      "str. fact": [
+        1.31,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        65.79,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        6.06,
+        "MB"
+      ],
+      "rhoin": [
+        2.02,
+        "MB"
+      ],
+      "rho*nmix": [
+        10.45,
+        "MB"
+      ],
+      "G-vectors": [
+        2.56,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        0.31,
         "MB"
       ],
       "<psi|beta>": [
@@ -16441,6 +17606,472 @@
     }
   },
   {
+    "output": "../acque/aqua11/out_aqua11_np192:_nt4:nd36_nt8_9573522",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 6.42,
+      "electrons": 130.86,
+      "forces": 1.67,
+      "wfcinit": 2.2,
+      "wfcinit:atom": 0.02,
+      "wfcinit:wfcr": 2.04,
+      "potinit": 0.23,
+      "hinit0": 0.29,
+      "c_bands": 108.08,
+      "sum_band": 15.57,
+      "v_of_rho": 1.85,
+      "v_h": 0.19,
+      "v_xc": 1.73,
+      "newd": 3.97,
+      "PAW_pot": 0.46,
+      "mix_rho": 0.51,
+      "init_us_2": 0.48,
+      "regterg": 107.07,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 11.72,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.23,
+      "sum_band:cal": 2.42,
+      "sum_band:bec": 0.11,
+      "addusdens": 3.47,
+      "addusd:skk": 2.44,
+      "addusd:dgemm": 0.78,
+      "addusd:qvan2": 0.16,
+      "rdiaghg": 17.7,
+      "regterg:over": 7.01,
+      "regterg:upda": 5.32,
+      "regterg:last": 12.52,
+      "rdiaghg:chol": 0.54,
+      "rdiaghg:inve": 0.61,
+      "rdiaghg:para": 0.8,
+      "h_psi": 57.67,
+      "s_psi": 5.59,
+      "g_psi": 0.1,
+      "h_psi:calbec": 6.95,
+      "vloc_psi": 44.74,
+      "vloc_psi:tg_": 0.35,
+      "add_vuspsi": 5.81,
+      "calbec": 9.81,
+      "fft": 1.73,
+      "ffts": 0.16,
+      "fftw": 44.24,
+      "interpolate": 0.26,
+      "fft_scatt_xy": 6.03,
+      "fft_scatt_yz": 21.19,
+      "fft_scatt_tg": 4.8,
+      "PWSCF": 147.99
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 80.0,
+      "regterg:over": 59.0,
+      "regterg:upda": 59.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 80.0,
+      "rdiaghg:inve": 80.0,
+      "rdiaghg:para": 160.0,
+      "h_psi": 81.0,
+      "s_psi": 81.0,
+      "g_psi": 59.0,
+      "h_psi:calbec": 81.0,
+      "vloc_psi": 81.0,
+      "vloc_psi:tg_": 81.0,
+      "add_vuspsi": 81.0,
+      "calbec": 106.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 6746.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 7038.0,
+      "fft_scatt_yz": 7038.0,
+      "fft_scatt_tg": 6746.0
+    },
+    "dims": {
+      "nat": 570,
+      "nbands": 760,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 92556.2521,
+      "Dense_grid": {
+        "ngrid_vecs": 8218634,
+        "fft_dims": [
+          320,
+          320,
+          320
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 2905922,
+        "fft_dims": [
+          225,
+          225,
+          225
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 4,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        8,
+        24
+      ],
+      "taskgroups": true,
+      "ndiag": 36
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        119.9,
+        "MB"
+      ],
+      "max_per_process": [
+        891.29,
+        "MB"
+      ],
+      "total": [
+        167.12,
+        "GB"
+      ],
+      "wfc": [
+        21.93,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        21.93,
+        "MB"
+      ],
+      "str. fact": [
+        1.31,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        65.79,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        6.06,
+        "MB"
+      ],
+      "rhoin": [
+        2.02,
+        "MB"
+      ],
+      "rho*nmix": [
+        10.44,
+        "MB"
+      ],
+      "G-vectors": [
+        2.56,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        1.47,
+        "MB"
+      ],
+      "<psi|beta>": [
+        13.22,
+        "MB"
+      ],
+      "psi": [
+        43.86,
+        "MB"
+      ],
+      "hpsi": [
+        43.86,
+        "MB"
+      ],
+      "spsi": [
+        43.86,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        95.54,
+        "MB"
+      ],
+      "addusdens": [
+        276.06,
+        "MB"
+      ],
+      "addusforce": [
+        771.38,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua11/out_aqua11_np192:_nt4:ndmax_nt8_9573522",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 6.9,
+      "electrons": 157.71,
+      "forces": 1.73,
+      "wfcinit": 2.66,
+      "wfcinit:atom": 0.02,
+      "wfcinit:wfcr": 2.51,
+      "potinit": 0.23,
+      "hinit0": 0.32,
+      "c_bands": 134.34,
+      "sum_band": 16.14,
+      "v_of_rho": 1.81,
+      "v_h": 0.19,
+      "v_xc": 1.69,
+      "newd": 4.0,
+      "PAW_pot": 0.44,
+      "mix_rho": 0.51,
+      "init_us_2": 0.48,
+      "regterg": 133.33,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 12.22,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.22,
+      "sum_band:cal": 2.5,
+      "sum_band:bec": 0.11,
+      "addusdens": 3.48,
+      "addusd:skk": 2.44,
+      "addusd:dgemm": 0.78,
+      "addusd:qvan2": 0.16,
+      "rdiaghg": 21.26,
+      "regterg:over": 8.7,
+      "regterg:upda": 13.64,
+      "regterg:last": 23.08,
+      "rdiaghg:chol": 0.69,
+      "rdiaghg:inve": 0.06,
+      "rdiaghg:para": 1.09,
+      "h_psi": 59.44,
+      "s_psi": 5.58,
+      "g_psi": 0.1,
+      "h_psi:calbec": 7.08,
+      "vloc_psi": 46.45,
+      "vloc_psi:tg_": 0.35,
+      "add_vuspsi": 5.73,
+      "calbec": 10.02,
+      "fft": 1.76,
+      "ffts": 0.19,
+      "fftw": 46.32,
+      "interpolate": 0.25,
+      "fft_scatt_xy": 6.11,
+      "fft_scatt_yz": 21.29,
+      "fft_scatt_tg": 6.95,
+      "PWSCF": 175.35
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 80.0,
+      "regterg:over": 59.0,
+      "regterg:upda": 59.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 80.0,
+      "rdiaghg:inve": 80.0,
+      "rdiaghg:para": 160.0,
+      "h_psi": 81.0,
+      "s_psi": 81.0,
+      "g_psi": 59.0,
+      "h_psi:calbec": 81.0,
+      "vloc_psi": 81.0,
+      "vloc_psi:tg_": 81.0,
+      "add_vuspsi": 81.0,
+      "calbec": 106.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 6746.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 7038.0,
+      "fft_scatt_yz": 7038.0,
+      "fft_scatt_tg": 6746.0
+    },
+    "dims": {
+      "nat": 570,
+      "nbands": 760,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 92556.2521,
+      "Dense_grid": {
+        "ngrid_vecs": 8218634,
+        "fft_dims": [
+          320,
+          320,
+          320
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 2905922,
+        "fft_dims": [
+          225,
+          225,
+          225
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 4,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        8,
+        24
+      ],
+      "taskgroups": true,
+      "ndiag": 169
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        119.9,
+        "MB"
+      ],
+      "max_per_process": [
+        891.29,
+        "MB"
+      ],
+      "total": [
+        167.12,
+        "GB"
+      ],
+      "wfc": [
+        21.93,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        21.93,
+        "MB"
+      ],
+      "str. fact": [
+        1.31,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        65.79,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        6.06,
+        "MB"
+      ],
+      "rhoin": [
+        2.02,
+        "MB"
+      ],
+      "rho*nmix": [
+        10.44,
+        "MB"
+      ],
+      "G-vectors": [
+        2.56,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        0.31,
+        "MB"
+      ],
+      "<psi|beta>": [
+        13.22,
+        "MB"
+      ],
+      "psi": [
+        43.86,
+        "MB"
+      ],
+      "hpsi": [
+        43.86,
+        "MB"
+      ],
+      "spsi": [
+        43.86,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        95.54,
+        "MB"
+      ],
+      "addusdens": [
+        276.06,
+        "MB"
+      ],
+      "addusforce": [
+        771.38,
+        "MB"
+      ]
+    }
+  },
+  {
     "output": "../acque/aqua11/out_aqua11_np192:_nt2:nd81_nt2_9557588",
     "algo": "davidson",
     "clocks": {
@@ -17140,6 +18771,239 @@
     }
   },
   {
+    "output": "../acque/aqua11/out_aqua11_np192:_nt4:nd81_nt2_9573522",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 10.76,
+      "electrons": 149.2,
+      "forces": 1.69,
+      "wfcinit": 5.98,
+      "wfcinit:atom": 0.02,
+      "wfcinit:wfcr": 5.82,
+      "potinit": 0.26,
+      "hinit0": 0.84,
+      "c_bands": 124.47,
+      "sum_band": 17.04,
+      "v_of_rho": 2.11,
+      "v_h": 0.25,
+      "v_xc": 1.94,
+      "newd": 4.1,
+      "PAW_pot": 0.44,
+      "mix_rho": 0.59,
+      "init_us_2": 0.48,
+      "regterg": 123.46,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 12.95,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.22,
+      "sum_band:cal": 2.62,
+      "sum_band:bec": 0.11,
+      "addusdens": 3.46,
+      "addusd:skk": 2.41,
+      "addusd:dgemm": 0.79,
+      "addusd:qvan2": 0.16,
+      "rdiaghg": 17.28,
+      "regterg:over": 6.3,
+      "regterg:upda": 8.05,
+      "regterg:last": 15.8,
+      "rdiaghg:chol": 0.52,
+      "rdiaghg:inve": 0.36,
+      "rdiaghg:para": 0.75,
+      "h_psi": 72.6,
+      "s_psi": 5.51,
+      "g_psi": 0.09,
+      "h_psi:calbec": 6.9,
+      "vloc_psi": 59.91,
+      "vloc_psi:tg_": 0.1,
+      "add_vuspsi": 5.62,
+      "calbec": 9.97,
+      "fft": 2.52,
+      "ffts": 0.22,
+      "fftw": 62.53,
+      "interpolate": 0.3,
+      "fft_scatt_xy": 3.55,
+      "fft_scatt_yz": 44.99,
+      "fft_scatt_tg": 4.78,
+      "PWSCF": 170.96
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 79.0,
+      "regterg:over": 58.0,
+      "regterg:upda": 58.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 79.0,
+      "rdiaghg:inve": 79.0,
+      "rdiaghg:para": 158.0,
+      "h_psi": 80.0,
+      "s_psi": 80.0,
+      "g_psi": 58.0,
+      "h_psi:calbec": 80.0,
+      "vloc_psi": 80.0,
+      "vloc_psi:tg_": 80.0,
+      "add_vuspsi": 80.0,
+      "calbec": 105.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 26454.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 26746.0,
+      "fft_scatt_yz": 26746.0,
+      "fft_scatt_tg": 26454.0
+    },
+    "dims": {
+      "nat": 570,
+      "nbands": 760,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 92556.2521,
+      "Dense_grid": {
+        "ngrid_vecs": 8218634,
+        "fft_dims": [
+          320,
+          320,
+          320
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 2905922,
+        "fft_dims": [
+          225,
+          225,
+          225
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 4,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        2,
+        96
+      ],
+      "taskgroups": true,
+      "ndiag": 81
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        121.68,
+        "MB"
+      ],
+      "max_per_process": [
+        893.69,
+        "MB"
+      ],
+      "total": [
+        167.57,
+        "GB"
+      ],
+      "wfc": [
+        21.93,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        21.93,
+        "MB"
+      ],
+      "str. fact": [
+        1.31,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        65.79,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        6.65,
+        "MB"
+      ],
+      "rhoin": [
+        2.22,
+        "MB"
+      ],
+      "rho*nmix": [
+        10.45,
+        "MB"
+      ],
+      "G-vectors": [
+        2.56,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        0.65,
+        "MB"
+      ],
+      "<psi|beta>": [
+        13.22,
+        "MB"
+      ],
+      "psi": [
+        43.86,
+        "MB"
+      ],
+      "hpsi": [
+        43.86,
+        "MB"
+      ],
+      "spsi": [
+        43.86,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        95.54,
+        "MB"
+      ],
+      "addusdens": [
+        276.28,
+        "MB"
+      ],
+      "addusforce": [
+        772.01,
+        "MB"
+      ]
+    }
+  },
+  {
     "output": "../acque/aqua11/out_aqua11_np48:_nt4:ndmax_nt8_9569823",
     "algo": "davidson",
     "clocks": {
@@ -17573,6 +19437,239 @@
       ],
       "h,s,v(r/c)": [
         0.31,
+        "MB"
+      ],
+      "<psi|beta>": [
+        13.22,
+        "MB"
+      ],
+      "psi": [
+        43.86,
+        "MB"
+      ],
+      "hpsi": [
+        43.86,
+        "MB"
+      ],
+      "spsi": [
+        43.86,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        95.54,
+        "MB"
+      ],
+      "addusdens": [
+        276.06,
+        "MB"
+      ],
+      "addusforce": [
+        771.38,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua11/out_aqua11_np192:_nt4:nd81_nt8_9573522",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 6.5,
+      "electrons": 170.33,
+      "forces": 1.7,
+      "wfcinit": 2.29,
+      "wfcinit:atom": 0.02,
+      "wfcinit:wfcr": 2.13,
+      "potinit": 0.22,
+      "hinit0": 0.3,
+      "c_bands": 143.5,
+      "sum_band": 17.56,
+      "v_of_rho": 2.51,
+      "v_h": 0.26,
+      "v_xc": 2.33,
+      "newd": 4.67,
+      "PAW_pot": 0.71,
+      "mix_rho": 0.67,
+      "init_us_2": 0.49,
+      "regterg": 142.25,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 13.32,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.23,
+      "sum_band:cal": 2.54,
+      "sum_band:bec": 0.11,
+      "addusdens": 3.54,
+      "addusd:skk": 2.48,
+      "addusd:dgemm": 0.77,
+      "addusd:qvan2": 0.19,
+      "rdiaghg": 20.0,
+      "regterg:over": 9.7,
+      "regterg:upda": 11.44,
+      "regterg:last": 19.09,
+      "rdiaghg:chol": 0.65,
+      "rdiaghg:inve": 0.39,
+      "rdiaghg:para": 1.12,
+      "h_psi": 71.41,
+      "s_psi": 5.78,
+      "g_psi": 0.09,
+      "h_psi:calbec": 7.82,
+      "vloc_psi": 57.45,
+      "vloc_psi:tg_": 0.38,
+      "add_vuspsi": 5.96,
+      "calbec": 10.81,
+      "fft": 2.44,
+      "ffts": 0.39,
+      "fftw": 58.56,
+      "interpolate": 0.36,
+      "fft_scatt_xy": 6.52,
+      "fft_scatt_yz": 32.28,
+      "fft_scatt_tg": 8.07,
+      "PWSCF": 187.52
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 80.0,
+      "regterg:over": 59.0,
+      "regterg:upda": 59.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 80.0,
+      "rdiaghg:inve": 80.0,
+      "rdiaghg:para": 160.0,
+      "h_psi": 81.0,
+      "s_psi": 81.0,
+      "g_psi": 59.0,
+      "h_psi:calbec": 81.0,
+      "vloc_psi": 81.0,
+      "vloc_psi:tg_": 81.0,
+      "add_vuspsi": 81.0,
+      "calbec": 106.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 6746.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 7038.0,
+      "fft_scatt_yz": 7038.0,
+      "fft_scatt_tg": 6746.0
+    },
+    "dims": {
+      "nat": 570,
+      "nbands": 760,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 92556.2521,
+      "Dense_grid": {
+        "ngrid_vecs": 8218634,
+        "fft_dims": [
+          320,
+          320,
+          320
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 2905922,
+        "fft_dims": [
+          225,
+          225,
+          225
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 4,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        8,
+        24
+      ],
+      "taskgroups": true,
+      "ndiag": 81
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        119.9,
+        "MB"
+      ],
+      "max_per_process": [
+        891.29,
+        "MB"
+      ],
+      "total": [
+        167.12,
+        "GB"
+      ],
+      "wfc": [
+        21.93,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        21.93,
+        "MB"
+      ],
+      "str. fact": [
+        1.31,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        65.79,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        6.06,
+        "MB"
+      ],
+      "rhoin": [
+        2.02,
+        "MB"
+      ],
+      "rho*nmix": [
+        10.44,
+        "MB"
+      ],
+      "G-vectors": [
+        2.56,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        0.65,
         "MB"
       ],
       "<psi|beta>": [
@@ -58561,6 +60658,705 @@
     }
   },
   {
+    "output": "../acque/aqua12/out_aqua12_np192:_nt2:nd16_nt4_9573525",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 14.3,
+      "electrons": 395.18,
+      "forces": 5.54,
+      "wfcinit": 6.88,
+      "wfcinit:atom": 0.05,
+      "wfcinit:wfcr": 6.58,
+      "potinit": 0.48,
+      "hinit0": 0.73,
+      "c_bands": 325.42,
+      "sum_band": 51.62,
+      "v_of_rho": 4.67,
+      "v_h": 0.57,
+      "v_xc": 4.29,
+      "newd": 10.58,
+      "PAW_pot": 1.06,
+      "mix_rho": 1.27,
+      "init_us_2": 1.75,
+      "regterg": 321.96,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 41.87,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.84,
+      "sum_band:cal": 8.31,
+      "sum_band:bec": 0.19,
+      "addusdens": 8.91,
+      "addusd:skk": 6.03,
+      "addusd:dgemm": 2.27,
+      "addusd:qvan2": 0.35,
+      "rdiaghg": 32.74,
+      "regterg:over": 20.14,
+      "regterg:upda": 14.59,
+      "regterg:last": 33.5,
+      "rdiaghg:chol": 1.03,
+      "rdiaghg:inve": 1.59,
+      "rdiaghg:para": 2.58,
+      "h_psi": 198.26,
+      "s_psi": 20.08,
+      "g_psi": 0.36,
+      "h_psi:calbec": 24.12,
+      "vloc_psi": 152.71,
+      "vloc_psi:tg_": 0.39,
+      "add_vuspsi": 20.77,
+      "calbec": 33.94,
+      "fft": 5.15,
+      "ffts": 0.29,
+      "fftw": 156.33,
+      "interpolate": 0.63,
+      "fft_scatt_xy": 27.66,
+      "fft_scatt_yz": 68.18,
+      "fft_scatt_tg": 7.06,
+      "PWSCF": 428.17
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 83.0,
+      "regterg:over": 62.0,
+      "regterg:upda": 62.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 83.0,
+      "rdiaghg:inve": 83.0,
+      "rdiaghg:para": 166.0,
+      "h_psi": 84.0,
+      "s_psi": 84.0,
+      "g_psi": 62.0,
+      "h_psi:calbec": 84.0,
+      "vloc_psi": 84.0,
+      "vloc_psi:tg_": 84.0,
+      "add_vuspsi": 84.0,
+      "calbec": 109.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 16621.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 16913.0,
+      "fft_scatt_yz": 16913.0,
+      "fft_scatt_tg": 16621.0
+    },
+    "dims": {
+      "nat": 711,
+      "nbands": 948,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 127283.4124,
+      "Dense_grid": {
+        "ngrid_vecs": 11302290,
+        "fft_dims": [
+          360,
+          360,
+          360
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 3995751,
+        "fft_dims": [
+          250,
+          250,
+          250
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 2,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        4,
+        48
+      ],
+      "taskgroups": true,
+      "ndiag": 16
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        195.29,
+        "MB"
+      ],
+      "max_per_process": [
+        1.48,
+        "GB"
+      ],
+      "total": [
+        283.21,
+        "GB"
+      ],
+      "wfc": [
+        37.62,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        37.62,
+        "MB"
+      ],
+      "str. fact": [
+        1.8,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        112.87,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        8.63,
+        "MB"
+      ],
+      "rhoin": [
+        2.88,
+        "MB"
+      ],
+      "rho*nmix": [
+        14.37,
+        "MB"
+      ],
+      "G-vectors": [
+        3.53,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        5.14,
+        "MB"
+      ],
+      "<psi|beta>": [
+        20.57,
+        "MB"
+      ],
+      "psi": [
+        75.25,
+        "MB"
+      ],
+      "hpsi": [
+        75.25,
+        "MB"
+      ],
+      "spsi": [
+        75.25,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        159.17,
+        "MB"
+      ],
+      "addusdens": [
+        464.46,
+        "MB"
+      ],
+      "addusforce": [
+        1315.16,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua12/out_aqua12_np192:_nt2:ndmax_nt8_9573525",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 14.44,
+      "electrons": 431.07,
+      "forces": 5.5,
+      "wfcinit": 7.01,
+      "wfcinit:atom": 0.05,
+      "wfcinit:wfcr": 6.71,
+      "potinit": 0.46,
+      "hinit0": 0.74,
+      "c_bands": 361.39,
+      "sum_band": 51.41,
+      "v_of_rho": 4.4,
+      "v_h": 0.53,
+      "v_xc": 4.04,
+      "newd": 10.69,
+      "PAW_pot": 1.31,
+      "mix_rho": 1.17,
+      "init_us_2": 1.73,
+      "regterg": 357.94,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 41.46,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.84,
+      "sum_band:cal": 8.17,
+      "sum_band:bec": 0.19,
+      "addusdens": 8.99,
+      "addusd:skk": 6.03,
+      "addusd:dgemm": 2.33,
+      "addusd:qvan2": 0.35,
+      "rdiaghg": 26.38,
+      "regterg:over": 20.86,
+      "regterg:upda": 29.71,
+      "regterg:last": 59.77,
+      "rdiaghg:chol": 0.73,
+      "rdiaghg:inve": 0.48,
+      "rdiaghg:para": 1.24,
+      "h_psi": 196.72,
+      "s_psi": 20.08,
+      "g_psi": 0.37,
+      "h_psi:calbec": 24.1,
+      "vloc_psi": 151.17,
+      "vloc_psi:tg_": 0.67,
+      "add_vuspsi": 20.72,
+      "calbec": 33.81,
+      "fft": 5.06,
+      "ffts": 0.29,
+      "fftw": 153.58,
+      "interpolate": 0.72,
+      "fft_scatt_xy": 28.17,
+      "fft_scatt_yz": 64.39,
+      "fft_scatt_tg": 9.18,
+      "PWSCF": 463.74
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 85.0,
+      "regterg:over": 64.0,
+      "regterg:upda": 64.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 85.0,
+      "rdiaghg:inve": 85.0,
+      "rdiaghg:para": 170.0,
+      "h_psi": 86.0,
+      "s_psi": 86.0,
+      "g_psi": 64.0,
+      "h_psi:calbec": 86.0,
+      "vloc_psi": 86.0,
+      "vloc_psi:tg_": 86.0,
+      "add_vuspsi": 86.0,
+      "calbec": 111.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 8406.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 8698.0,
+      "fft_scatt_yz": 8698.0,
+      "fft_scatt_tg": 8406.0
+    },
+    "dims": {
+      "nat": 711,
+      "nbands": 948,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 127283.4124,
+      "Dense_grid": {
+        "ngrid_vecs": 11302290,
+        "fft_dims": [
+          360,
+          360,
+          360
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 3995751,
+        "fft_dims": [
+          250,
+          250,
+          250
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 2,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        8,
+        24
+      ],
+      "taskgroups": true,
+      "ndiag": 169
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        194.15,
+        "MB"
+      ],
+      "max_per_process": [
+        1.47,
+        "GB"
+      ],
+      "total": [
+        282.81,
+        "GB"
+      ],
+      "wfc": [
+        37.62,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        37.62,
+        "MB"
+      ],
+      "str. fact": [
+        1.8,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        112.87,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        8.25,
+        "MB"
+      ],
+      "rhoin": [
+        2.75,
+        "MB"
+      ],
+      "rho*nmix": [
+        14.36,
+        "MB"
+      ],
+      "G-vectors": [
+        3.53,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        0.48,
+        "MB"
+      ],
+      "<psi|beta>": [
+        20.57,
+        "MB"
+      ],
+      "psi": [
+        75.25,
+        "MB"
+      ],
+      "hpsi": [
+        75.25,
+        "MB"
+      ],
+      "spsi": [
+        75.25,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        159.17,
+        "MB"
+      ],
+      "addusdens": [
+        464.11,
+        "MB"
+      ],
+      "addusforce": [
+        1314.16,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua12/out_aqua12_np192:_nt2:ndmax_nt2_9573525",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 14.94,
+      "electrons": 427.0,
+      "forces": 5.72,
+      "wfcinit": 7.3,
+      "wfcinit:atom": 0.05,
+      "wfcinit:wfcr": 7.0,
+      "potinit": 0.52,
+      "hinit0": 0.83,
+      "c_bands": 359.76,
+      "sum_band": 48.58,
+      "v_of_rho": 5.02,
+      "v_h": 0.57,
+      "v_xc": 4.63,
+      "newd": 10.5,
+      "PAW_pot": 1.26,
+      "mix_rho": 1.26,
+      "init_us_2": 1.73,
+      "regterg": 356.32,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 38.84,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.84,
+      "sum_band:cal": 8.22,
+      "sum_band:bec": 0.19,
+      "addusdens": 8.97,
+      "addusd:skk": 6.06,
+      "addusd:dgemm": 2.31,
+      "addusd:qvan2": 0.35,
+      "rdiaghg": 27.11,
+      "regterg:over": 22.57,
+      "regterg:upda": 29.0,
+      "regterg:last": 57.29,
+      "rdiaghg:chol": 0.79,
+      "rdiaghg:inve": 0.52,
+      "rdiaghg:para": 1.42,
+      "h_psi": 197.55,
+      "s_psi": 20.0,
+      "g_psi": 0.37,
+      "h_psi:calbec": 24.05,
+      "vloc_psi": 151.94,
+      "vloc_psi:tg_": 0.15,
+      "add_vuspsi": 20.87,
+      "calbec": 33.92,
+      "fft": 5.45,
+      "ffts": 0.34,
+      "fftw": 159.65,
+      "interpolate": 0.66,
+      "fft_scatt_xy": 17.16,
+      "fft_scatt_yz": 95.19,
+      "fft_scatt_tg": 7.17,
+      "PWSCF": 463.87
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 83.0,
+      "regterg:over": 62.0,
+      "regterg:upda": 62.0,
+      "regterg:last": 49.0,
+      "rdiaghg:chol": 83.0,
+      "rdiaghg:inve": 83.0,
+      "rdiaghg:para": 166.0,
+      "h_psi": 84.0,
+      "s_psi": 84.0,
+      "g_psi": 62.0,
+      "h_psi:calbec": 84.0,
+      "vloc_psi": 84.0,
+      "vloc_psi:tg_": 84.0,
+      "add_vuspsi": 84.0,
+      "calbec": 109.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 33129.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 33421.0,
+      "fft_scatt_yz": 33421.0,
+      "fft_scatt_tg": 33129.0
+    },
+    "dims": {
+      "nat": 711,
+      "nbands": 948,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 127283.4124,
+      "Dense_grid": {
+        "ngrid_vecs": 11302290,
+        "fft_dims": [
+          360,
+          360,
+          360
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 3995751,
+        "fft_dims": [
+          250,
+          250,
+          250
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 2,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        2,
+        96
+      ],
+      "taskgroups": true,
+      "ndiag": 169
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        195.28,
+        "MB"
+      ],
+      "max_per_process": [
+        1.47,
+        "GB"
+      ],
+      "total": [
+        283.18,
+        "GB"
+      ],
+      "wfc": [
+        37.62,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        37.62,
+        "MB"
+      ],
+      "str. fact": [
+        1.8,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        112.87,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        8.63,
+        "MB"
+      ],
+      "rhoin": [
+        2.88,
+        "MB"
+      ],
+      "rho*nmix": [
+        14.37,
+        "MB"
+      ],
+      "G-vectors": [
+        3.53,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        0.48,
+        "MB"
+      ],
+      "<psi|beta>": [
+        20.57,
+        "MB"
+      ],
+      "psi": [
+        75.25,
+        "MB"
+      ],
+      "hpsi": [
+        75.25,
+        "MB"
+      ],
+      "spsi": [
+        75.25,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        159.17,
+        "MB"
+      ],
+      "addusdens": [
+        464.41,
+        "MB"
+      ],
+      "addusforce": [
+        1315.03,
+        "MB"
+      ]
+    }
+  },
+  {
     "output": "../acque/aqua12/out_aqua12_np96:_nt2:ndmax_nt8_9557613",
     "algo": "davidson",
     "clocks": {
@@ -59493,6 +62289,239 @@
     }
   },
   {
+    "output": "../acque/aqua12/out_aqua12_np192:_nt2:nd16_nt8_9573525",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 14.09,
+      "electrons": 397.13,
+      "forces": 5.5,
+      "wfcinit": 6.68,
+      "wfcinit:atom": 0.04,
+      "wfcinit:wfcr": 6.38,
+      "potinit": 0.47,
+      "hinit0": 0.7,
+      "c_bands": 328.4,
+      "sum_band": 51.22,
+      "v_of_rho": 4.33,
+      "v_h": 0.51,
+      "v_xc": 3.98,
+      "newd": 10.46,
+      "PAW_pot": 1.04,
+      "mix_rho": 1.16,
+      "init_us_2": 1.71,
+      "regterg": 324.95,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 41.53,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.83,
+      "sum_band:cal": 8.36,
+      "sum_band:bec": 0.2,
+      "addusdens": 8.98,
+      "addusd:skk": 5.99,
+      "addusd:dgemm": 2.35,
+      "addusd:qvan2": 0.35,
+      "rdiaghg": 33.66,
+      "regterg:over": 21.43,
+      "regterg:upda": 15.02,
+      "regterg:last": 34.63,
+      "rdiaghg:chol": 1.06,
+      "rdiaghg:inve": 1.65,
+      "rdiaghg:para": 2.67,
+      "h_psi": 196.21,
+      "s_psi": 20.24,
+      "g_psi": 0.36,
+      "h_psi:calbec": 24.38,
+      "vloc_psi": 150.03,
+      "vloc_psi:tg_": 0.67,
+      "add_vuspsi": 21.08,
+      "calbec": 34.27,
+      "fft": 4.49,
+      "ffts": 0.27,
+      "fftw": 152.23,
+      "interpolate": 0.57,
+      "fft_scatt_xy": 27.93,
+      "fft_scatt_yz": 62.21,
+      "fft_scatt_tg": 9.14,
+      "PWSCF": 430.27
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 85.0,
+      "regterg:over": 64.0,
+      "regterg:upda": 64.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 85.0,
+      "rdiaghg:inve": 85.0,
+      "rdiaghg:para": 170.0,
+      "h_psi": 86.0,
+      "s_psi": 86.0,
+      "g_psi": 64.0,
+      "h_psi:calbec": 86.0,
+      "vloc_psi": 86.0,
+      "vloc_psi:tg_": 86.0,
+      "add_vuspsi": 86.0,
+      "calbec": 111.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 8406.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 8698.0,
+      "fft_scatt_yz": 8698.0,
+      "fft_scatt_tg": 8406.0
+    },
+    "dims": {
+      "nat": 711,
+      "nbands": 948,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 127283.4124,
+      "Dense_grid": {
+        "ngrid_vecs": 11302290,
+        "fft_dims": [
+          360,
+          360,
+          360
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 3995751,
+        "fft_dims": [
+          250,
+          250,
+          250
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 2,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        8,
+        24
+      ],
+      "taskgroups": true,
+      "ndiag": 16
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        194.15,
+        "MB"
+      ],
+      "max_per_process": [
+        1.47,
+        "GB"
+      ],
+      "total": [
+        282.81,
+        "GB"
+      ],
+      "wfc": [
+        37.62,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        37.62,
+        "MB"
+      ],
+      "str. fact": [
+        1.8,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        112.87,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        8.25,
+        "MB"
+      ],
+      "rhoin": [
+        2.75,
+        "MB"
+      ],
+      "rho*nmix": [
+        14.36,
+        "MB"
+      ],
+      "G-vectors": [
+        3.53,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        5.14,
+        "MB"
+      ],
+      "<psi|beta>": [
+        20.57,
+        "MB"
+      ],
+      "psi": [
+        75.25,
+        "MB"
+      ],
+      "hpsi": [
+        75.25,
+        "MB"
+      ],
+      "spsi": [
+        75.25,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        159.17,
+        "MB"
+      ],
+      "addusdens": [
+        464.11,
+        "MB"
+      ],
+      "addusforce": [
+        1314.16,
+        "MB"
+      ]
+    }
+  },
+  {
     "output": "../acque/aqua12/out_aqua12_np96:_nt4:nd16_nt4_9569827",
     "algo": "davidson",
     "clocks": {
@@ -59721,6 +62750,472 @@
       ],
       "addusforce": [
         2629.76,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua12/out_aqua12_np192:_nt2:nd64_nt8_9573525",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 14.07,
+      "electrons": 404.81,
+      "forces": 5.48,
+      "wfcinit": 6.65,
+      "wfcinit:atom": 0.04,
+      "wfcinit:wfcr": 6.35,
+      "potinit": 0.47,
+      "hinit0": 0.69,
+      "c_bands": 335.67,
+      "sum_band": 50.62,
+      "v_of_rho": 4.61,
+      "v_h": 0.55,
+      "v_xc": 4.22,
+      "newd": 10.64,
+      "PAW_pot": 1.52,
+      "mix_rho": 1.19,
+      "init_us_2": 1.73,
+      "regterg": 332.18,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 40.88,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.84,
+      "sum_band:cal": 8.21,
+      "sum_band:bec": 0.19,
+      "addusdens": 8.99,
+      "addusd:skk": 6.05,
+      "addusd:dgemm": 2.32,
+      "addusd:qvan2": 0.35,
+      "rdiaghg": 22.55,
+      "regterg:over": 22.06,
+      "regterg:upda": 23.21,
+      "regterg:last": 45.61,
+      "rdiaghg:chol": 0.69,
+      "rdiaghg:inve": 0.73,
+      "rdiaghg:para": 1.32,
+      "h_psi": 195.59,
+      "s_psi": 20.05,
+      "g_psi": 0.36,
+      "h_psi:calbec": 24.25,
+      "vloc_psi": 149.7,
+      "vloc_psi:tg_": 0.67,
+      "add_vuspsi": 20.94,
+      "calbec": 34.0,
+      "fft": 4.86,
+      "ffts": 0.32,
+      "fftw": 151.43,
+      "interpolate": 0.62,
+      "fft_scatt_xy": 27.92,
+      "fft_scatt_yz": 62.92,
+      "fft_scatt_tg": 8.57,
+      "PWSCF": 437.41
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 85.0,
+      "regterg:over": 64.0,
+      "regterg:upda": 64.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 85.0,
+      "rdiaghg:inve": 85.0,
+      "rdiaghg:para": 170.0,
+      "h_psi": 86.0,
+      "s_psi": 86.0,
+      "g_psi": 64.0,
+      "h_psi:calbec": 86.0,
+      "vloc_psi": 86.0,
+      "vloc_psi:tg_": 86.0,
+      "add_vuspsi": 86.0,
+      "calbec": 111.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 8406.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 8698.0,
+      "fft_scatt_yz": 8698.0,
+      "fft_scatt_tg": 8406.0
+    },
+    "dims": {
+      "nat": 711,
+      "nbands": 948,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 127283.4124,
+      "Dense_grid": {
+        "ngrid_vecs": 11302290,
+        "fft_dims": [
+          360,
+          360,
+          360
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 3995751,
+        "fft_dims": [
+          250,
+          250,
+          250
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 2,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        8,
+        24
+      ],
+      "taskgroups": true,
+      "ndiag": 64
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        194.15,
+        "MB"
+      ],
+      "max_per_process": [
+        1.47,
+        "GB"
+      ],
+      "total": [
+        282.81,
+        "GB"
+      ],
+      "wfc": [
+        37.62,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        37.62,
+        "MB"
+      ],
+      "str. fact": [
+        1.8,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        112.87,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        8.25,
+        "MB"
+      ],
+      "rhoin": [
+        2.75,
+        "MB"
+      ],
+      "rho*nmix": [
+        14.36,
+        "MB"
+      ],
+      "G-vectors": [
+        3.53,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        1.29,
+        "MB"
+      ],
+      "<psi|beta>": [
+        20.57,
+        "MB"
+      ],
+      "psi": [
+        75.25,
+        "MB"
+      ],
+      "hpsi": [
+        75.25,
+        "MB"
+      ],
+      "spsi": [
+        75.25,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        159.17,
+        "MB"
+      ],
+      "addusdens": [
+        464.11,
+        "MB"
+      ],
+      "addusforce": [
+        1314.16,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua12/out_aqua12_np192:_nt2:nd64_nt4_9573525",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 15.15,
+      "electrons": 405.32,
+      "forces": 5.51,
+      "wfcinit": 7.71,
+      "wfcinit:atom": 0.05,
+      "wfcinit:wfcr": 7.41,
+      "potinit": 0.48,
+      "hinit0": 0.73,
+      "c_bands": 334.7,
+      "sum_band": 51.83,
+      "v_of_rho": 4.74,
+      "v_h": 0.58,
+      "v_xc": 4.35,
+      "newd": 10.91,
+      "PAW_pot": 1.11,
+      "mix_rho": 1.42,
+      "init_us_2": 1.73,
+      "regterg": 331.17,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 41.8,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.83,
+      "sum_band:cal": 8.44,
+      "sum_band:bec": 0.19,
+      "addusdens": 8.94,
+      "addusd:skk": 6.06,
+      "addusd:dgemm": 2.26,
+      "addusd:qvan2": 0.35,
+      "rdiaghg": 21.89,
+      "regterg:over": 21.74,
+      "regterg:upda": 23.04,
+      "regterg:last": 42.77,
+      "rdiaghg:chol": 0.69,
+      "rdiaghg:inve": 0.71,
+      "rdiaghg:para": 1.3,
+      "h_psi": 199.53,
+      "s_psi": 20.08,
+      "g_psi": 0.36,
+      "h_psi:calbec": 24.28,
+      "vloc_psi": 153.73,
+      "vloc_psi:tg_": 0.38,
+      "add_vuspsi": 20.83,
+      "calbec": 34.25,
+      "fft": 5.44,
+      "ffts": 0.31,
+      "fftw": 156.93,
+      "interpolate": 0.64,
+      "fft_scatt_xy": 28.29,
+      "fft_scatt_yz": 68.75,
+      "fft_scatt_tg": 7.39,
+      "PWSCF": 439.47
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 83.0,
+      "regterg:over": 62.0,
+      "regterg:upda": 62.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 83.0,
+      "rdiaghg:inve": 83.0,
+      "rdiaghg:para": 166.0,
+      "h_psi": 84.0,
+      "s_psi": 84.0,
+      "g_psi": 62.0,
+      "h_psi:calbec": 84.0,
+      "vloc_psi": 84.0,
+      "vloc_psi:tg_": 84.0,
+      "add_vuspsi": 84.0,
+      "calbec": 109.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 16619.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 16911.0,
+      "fft_scatt_yz": 16911.0,
+      "fft_scatt_tg": 16619.0
+    },
+    "dims": {
+      "nat": 711,
+      "nbands": 948,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 127283.4124,
+      "Dense_grid": {
+        "ngrid_vecs": 11302290,
+        "fft_dims": [
+          360,
+          360,
+          360
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 3995751,
+        "fft_dims": [
+          250,
+          250,
+          250
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 2,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        4,
+        48
+      ],
+      "taskgroups": true,
+      "ndiag": 64
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        195.29,
+        "MB"
+      ],
+      "max_per_process": [
+        1.48,
+        "GB"
+      ],
+      "total": [
+        283.21,
+        "GB"
+      ],
+      "wfc": [
+        37.62,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        37.62,
+        "MB"
+      ],
+      "str. fact": [
+        1.8,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        112.87,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        8.63,
+        "MB"
+      ],
+      "rhoin": [
+        2.88,
+        "MB"
+      ],
+      "rho*nmix": [
+        14.37,
+        "MB"
+      ],
+      "G-vectors": [
+        3.53,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        1.29,
+        "MB"
+      ],
+      "<psi|beta>": [
+        20.57,
+        "MB"
+      ],
+      "psi": [
+        75.25,
+        "MB"
+      ],
+      "hpsi": [
+        75.25,
+        "MB"
+      ],
+      "spsi": [
+        75.25,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        159.17,
+        "MB"
+      ],
+      "addusdens": [
+        464.46,
+        "MB"
+      ],
+      "addusforce": [
+        1315.16,
         "MB"
       ]
     }
@@ -61357,6 +64852,472 @@
     }
   },
   {
+    "output": "../acque/aqua12/out_aqua12_np192:_nt2:nd64_nt2_9573525",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 14.43,
+      "electrons": 393.58,
+      "forces": 5.67,
+      "wfcinit": 6.96,
+      "wfcinit:atom": 0.05,
+      "wfcinit:wfcr": 6.66,
+      "potinit": 0.49,
+      "hinit0": 0.76,
+      "c_bands": 325.69,
+      "sum_band": 49.8,
+      "v_of_rho": 4.56,
+      "v_h": 0.58,
+      "v_xc": 4.15,
+      "newd": 10.56,
+      "PAW_pot": 1.03,
+      "mix_rho": 1.25,
+      "init_us_2": 1.72,
+      "regterg": 322.2,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 40.01,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.82,
+      "sum_band:cal": 8.57,
+      "sum_band:bec": 0.19,
+      "addusdens": 8.97,
+      "addusd:skk": 6.05,
+      "addusd:dgemm": 2.3,
+      "addusd:qvan2": 0.35,
+      "rdiaghg": 21.98,
+      "regterg:over": 21.22,
+      "regterg:upda": 22.83,
+      "regterg:last": 41.06,
+      "rdiaghg:chol": 0.69,
+      "rdiaghg:inve": 0.71,
+      "rdiaghg:para": 1.25,
+      "h_psi": 191.78,
+      "s_psi": 20.28,
+      "g_psi": 0.35,
+      "h_psi:calbec": 23.83,
+      "vloc_psi": 146.39,
+      "vloc_psi:tg_": 0.15,
+      "add_vuspsi": 20.89,
+      "calbec": 34.06,
+      "fft": 5.03,
+      "ffts": 0.34,
+      "fftw": 153.63,
+      "interpolate": 0.66,
+      "fft_scatt_xy": 17.24,
+      "fft_scatt_yz": 87.65,
+      "fft_scatt_tg": 6.76,
+      "PWSCF": 427.25
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 83.0,
+      "regterg:over": 62.0,
+      "regterg:upda": 62.0,
+      "regterg:last": 49.0,
+      "rdiaghg:chol": 83.0,
+      "rdiaghg:inve": 83.0,
+      "rdiaghg:para": 166.0,
+      "h_psi": 84.0,
+      "s_psi": 84.0,
+      "g_psi": 62.0,
+      "h_psi:calbec": 84.0,
+      "vloc_psi": 84.0,
+      "vloc_psi:tg_": 84.0,
+      "add_vuspsi": 84.0,
+      "calbec": 109.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 33129.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 33421.0,
+      "fft_scatt_yz": 33421.0,
+      "fft_scatt_tg": 33129.0
+    },
+    "dims": {
+      "nat": 711,
+      "nbands": 948,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 127283.4124,
+      "Dense_grid": {
+        "ngrid_vecs": 11302290,
+        "fft_dims": [
+          360,
+          360,
+          360
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 3995751,
+        "fft_dims": [
+          250,
+          250,
+          250
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 2,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        2,
+        96
+      ],
+      "taskgroups": true,
+      "ndiag": 64
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        195.28,
+        "MB"
+      ],
+      "max_per_process": [
+        1.47,
+        "GB"
+      ],
+      "total": [
+        283.18,
+        "GB"
+      ],
+      "wfc": [
+        37.62,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        37.62,
+        "MB"
+      ],
+      "str. fact": [
+        1.8,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        112.87,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        8.63,
+        "MB"
+      ],
+      "rhoin": [
+        2.88,
+        "MB"
+      ],
+      "rho*nmix": [
+        14.37,
+        "MB"
+      ],
+      "G-vectors": [
+        3.53,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        1.29,
+        "MB"
+      ],
+      "<psi|beta>": [
+        20.57,
+        "MB"
+      ],
+      "psi": [
+        75.25,
+        "MB"
+      ],
+      "hpsi": [
+        75.25,
+        "MB"
+      ],
+      "spsi": [
+        75.25,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        159.17,
+        "MB"
+      ],
+      "addusdens": [
+        464.41,
+        "MB"
+      ],
+      "addusforce": [
+        1315.03,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua12/out_aqua12_np192:_nt2:nd16_nt2_9573525",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 14.46,
+      "electrons": 396.56,
+      "forces": 5.51,
+      "wfcinit": 7.03,
+      "wfcinit:atom": 0.05,
+      "wfcinit:wfcr": 6.72,
+      "potinit": 0.49,
+      "hinit0": 0.72,
+      "c_bands": 328.51,
+      "sum_band": 50.23,
+      "v_of_rho": 4.51,
+      "v_h": 0.55,
+      "v_xc": 4.14,
+      "newd": 10.42,
+      "PAW_pot": 1.03,
+      "mix_rho": 1.26,
+      "init_us_2": 1.72,
+      "regterg": 325.05,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 40.15,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.82,
+      "sum_band:cal": 8.2,
+      "sum_band:bec": 0.19,
+      "addusdens": 8.96,
+      "addusd:skk": 6.04,
+      "addusd:dgemm": 2.31,
+      "addusd:qvan2": 0.35,
+      "rdiaghg": 32.99,
+      "regterg:over": 21.59,
+      "regterg:upda": 16.74,
+      "regterg:last": 33.08,
+      "rdiaghg:chol": 1.01,
+      "rdiaghg:inve": 1.59,
+      "rdiaghg:para": 2.55,
+      "h_psi": 197.72,
+      "s_psi": 20.19,
+      "g_psi": 0.37,
+      "h_psi:calbec": 23.94,
+      "vloc_psi": 152.11,
+      "vloc_psi:tg_": 0.15,
+      "add_vuspsi": 21.02,
+      "calbec": 33.64,
+      "fft": 5.32,
+      "ffts": 0.34,
+      "fftw": 161.33,
+      "interpolate": 0.66,
+      "fft_scatt_xy": 17.26,
+      "fft_scatt_yz": 96.8,
+      "fft_scatt_tg": 7.24,
+      "PWSCF": 429.67
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 83.0,
+      "regterg:over": 62.0,
+      "regterg:upda": 62.0,
+      "regterg:last": 49.0,
+      "rdiaghg:chol": 83.0,
+      "rdiaghg:inve": 83.0,
+      "rdiaghg:para": 166.0,
+      "h_psi": 84.0,
+      "s_psi": 84.0,
+      "g_psi": 62.0,
+      "h_psi:calbec": 84.0,
+      "vloc_psi": 84.0,
+      "vloc_psi:tg_": 84.0,
+      "add_vuspsi": 84.0,
+      "calbec": 109.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 33129.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 33421.0,
+      "fft_scatt_yz": 33421.0,
+      "fft_scatt_tg": 33129.0
+    },
+    "dims": {
+      "nat": 711,
+      "nbands": 948,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 127283.4124,
+      "Dense_grid": {
+        "ngrid_vecs": 11302290,
+        "fft_dims": [
+          360,
+          360,
+          360
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 3995751,
+        "fft_dims": [
+          250,
+          250,
+          250
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 2,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        2,
+        96
+      ],
+      "taskgroups": true,
+      "ndiag": 16
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        195.28,
+        "MB"
+      ],
+      "max_per_process": [
+        1.47,
+        "GB"
+      ],
+      "total": [
+        283.18,
+        "GB"
+      ],
+      "wfc": [
+        37.62,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        37.62,
+        "MB"
+      ],
+      "str. fact": [
+        1.8,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        112.87,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        8.63,
+        "MB"
+      ],
+      "rhoin": [
+        2.88,
+        "MB"
+      ],
+      "rho*nmix": [
+        14.37,
+        "MB"
+      ],
+      "G-vectors": [
+        3.53,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        5.14,
+        "MB"
+      ],
+      "<psi|beta>": [
+        20.57,
+        "MB"
+      ],
+      "psi": [
+        75.25,
+        "MB"
+      ],
+      "hpsi": [
+        75.25,
+        "MB"
+      ],
+      "spsi": [
+        75.25,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        159.17,
+        "MB"
+      ],
+      "addusdens": [
+        464.41,
+        "MB"
+      ],
+      "addusforce": [
+        1315.03,
+        "MB"
+      ]
+    }
+  },
+  {
     "output": "../acque/aqua12/out_aqua12_np96:_nt4:ndmax_nt4_9569827",
     "algo": "davidson",
     "clocks": {
@@ -61585,6 +65546,239 @@
       ],
       "addusforce": [
         2629.76,
+        "MB"
+      ]
+    }
+  },
+  {
+    "output": "../acque/aqua12/out_aqua12_np192:_nt2:ndmax_nt4_9573525",
+    "algo": "davidson",
+    "clocks": {
+      "init_run": 14.89,
+      "electrons": 542.87,
+      "forces": 5.58,
+      "wfcinit": 7.36,
+      "wfcinit:atom": 0.05,
+      "wfcinit:wfcr": 7.06,
+      "potinit": 0.48,
+      "hinit0": 0.76,
+      "c_bands": 468.54,
+      "sum_band": 53.74,
+      "v_of_rho": 5.5,
+      "v_h": 0.59,
+      "v_xc": 5.08,
+      "newd": 11.02,
+      "PAW_pot": 1.3,
+      "mix_rho": 1.62,
+      "init_us_2": 1.73,
+      "regterg": 464.92,
+      "sum_band:wei": 0.0,
+      "sum_band:loo": 43.05,
+      "sum_band:buf": 0.0,
+      "sum_band:ini": 0.83,
+      "sum_band:cal": 8.26,
+      "sum_band:bec": 0.2,
+      "addusdens": 8.95,
+      "addusd:skk": 6.05,
+      "addusd:dgemm": 2.29,
+      "addusd:qvan2": 0.35,
+      "rdiaghg": 57.17,
+      "regterg:over": 35.32,
+      "regterg:upda": 41.14,
+      "regterg:last": 69.41,
+      "rdiaghg:chol": 1.19,
+      "rdiaghg:inve": 0.54,
+      "rdiaghg:para": 1.54,
+      "h_psi": 234.5,
+      "s_psi": 19.97,
+      "g_psi": 0.37,
+      "h_psi:calbec": 24.88,
+      "vloc_psi": 188.12,
+      "vloc_psi:tg_": 0.38,
+      "add_vuspsi": 20.83,
+      "calbec": 34.7,
+      "fft": 7.2,
+      "ffts": 0.53,
+      "fftw": 193.27,
+      "interpolate": 1.11,
+      "fft_scatt_xy": 28.6,
+      "fft_scatt_yz": 95.71,
+      "fft_scatt_tg": 18.57,
+      "PWSCF": 576.45
+    },
+    "iter": {
+      "init_run": 1.0,
+      "electrons": 1.0,
+      "forces": 1.0,
+      "wfcinit": 1.0,
+      "wfcinit:atom": 1.0,
+      "wfcinit:wfcr": 1.0,
+      "potinit": 1.0,
+      "hinit0": 1.0,
+      "c_bands": 21.0,
+      "sum_band": 21.0,
+      "v_of_rho": 22.0,
+      "v_h": 22.0,
+      "v_xc": 23.0,
+      "newd": 22.0,
+      "PAW_pot": 22.0,
+      "mix_rho": 21.0,
+      "init_us_2": 43.0,
+      "regterg": 21.0,
+      "sum_band:wei": 21.0,
+      "sum_band:loo": 21.0,
+      "sum_band:buf": 21.0,
+      "sum_band:ini": 21.0,
+      "sum_band:cal": 21.0,
+      "sum_band:bec": 21.0,
+      "addusdens": 21.0,
+      "addusd:skk": 42.0,
+      "addusd:dgemm": 42.0,
+      "addusd:qvan2": 42.0,
+      "rdiaghg": 83.0,
+      "regterg:over": 62.0,
+      "regterg:upda": 62.0,
+      "regterg:last": 50.0,
+      "rdiaghg:chol": 83.0,
+      "rdiaghg:inve": 83.0,
+      "rdiaghg:para": 166.0,
+      "h_psi": 84.0,
+      "s_psi": 84.0,
+      "g_psi": 62.0,
+      "h_psi:calbec": 84.0,
+      "vloc_psi": 84.0,
+      "vloc_psi:tg_": 84.0,
+      "add_vuspsi": 84.0,
+      "calbec": 109.0,
+      "fft": 249.0,
+      "ffts": 43.0,
+      "fftw": 16621.0,
+      "interpolate": 22.0,
+      "fft_scatt_xy": 16913.0,
+      "fft_scatt_yz": 16913.0,
+      "fft_scatt_tg": 16621.0
+    },
+    "dims": {
+      "nat": 711,
+      "nbands": 948,
+      "ecutwfc": 60.0,
+      "ecutrho": 480.0,
+      "vol": 127283.4124,
+      "Dense_grid": {
+        "ngrid_vecs": 11302290,
+        "fft_dims": [
+          360,
+          360,
+          360
+        ]
+      },
+      "Smooth_grid": {
+        "ngrid_vecs": 3995751,
+        "fft_dims": [
+          250,
+          250,
+          250
+        ]
+      },
+      "nkpoints": 1,
+      "MPI tasks": 192,
+      "Threads": 2,
+      "npool": 1,
+      "n_RG": 192,
+      "wfc_fft_division": [
+        4,
+        48
+      ],
+      "taskgroups": true,
+      "ndiag": 169
+    },
+    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
+    "Node": "2*24-core",
+    "Memory": "192 GB DDR4 RAM",
+    "Net": "Intel OmniPath (100Gb/s) high-performance network",
+    "RAM": {
+      "static_per_process": [
+        195.29,
+        "MB"
+      ],
+      "max_per_process": [
+        1.48,
+        "GB"
+      ],
+      "total": [
+        283.21,
+        "GB"
+      ],
+      "wfc": [
+        37.62,
+        "MB"
+      ],
+      "wfc (w. buffer)": [
+        37.62,
+        "MB"
+      ],
+      "str. fact": [
+        1.8,
+        "MB"
+      ],
+      "local pot": [
+        0.0,
+        "MB"
+      ],
+      "nlocal pot": [
+        112.87,
+        "MB"
+      ],
+      "qrad": [
+        1.0,
+        "MB"
+      ],
+      "rho,v,vnew": [
+        8.63,
+        "MB"
+      ],
+      "rhoin": [
+        2.88,
+        "MB"
+      ],
+      "rho*nmix": [
+        14.37,
+        "MB"
+      ],
+      "G-vectors": [
+        3.53,
+        "MB"
+      ],
+      "h,s,v(r/c)": [
+        0.48,
+        "MB"
+      ],
+      "<psi|beta>": [
+        20.57,
+        "MB"
+      ],
+      "psi": [
+        75.25,
+        "MB"
+      ],
+      "hpsi": [
+        75.25,
+        "MB"
+      ],
+      "spsi": [
+        75.25,
+        "MB"
+      ],
+      "wfcinit/wfcrot": [
+        159.17,
+        "MB"
+      ],
+      "addusdens": [
+        464.46,
+        "MB"
+      ],
+      "addusforce": [
+        1315.16,
         "MB"
       ]
     }
