@@ -21,7 +21,7 @@ ecutrho=250
 occupations='fixed'
 /
 &ELECTRONS
-startingpot='file'
+startingpot='atomic'
 conv_thr=1e-10
 /
 &ions
