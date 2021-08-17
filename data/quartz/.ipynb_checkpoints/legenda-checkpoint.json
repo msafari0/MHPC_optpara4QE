@@ -1,0 +1,39 @@
+{
+  "output": "path to  qe output file",
+  "algo": "KS solver used",
+  "clocks": "clock printout as in QE output",
+  "iter": "number of calls for each clock as in QE output",
+  "dims": {
+    "doc": "dimensions of the system",
+    "legenda": {
+      "nat": "number of atoms",
+      "nbands": "number of bands",
+      "ecutwfc": "cut off energy for wave functions",
+      "ecutrho": "cut off energy for charge density", 
+      "vol": "Volume of the cell",
+      "Dense_grid": "Dimensions of dense FFT grid",
+      "Smooth_grid": "Dimensions of smooth FFT grid",
+      "nkpoints": "Number of k-points",
+      "MPI tasks": "nr of MPI tasks",
+      "Threads": "nr of threads",
+      "npool": "number of pools",
+      "n_RG": "Tasks per pool",
+      "wfc_fft_division": "taskgroups-tasks-per-group",
+      "taskgroups": "use taskgroups",
+      "ndiag": "tasks for distributed linear algebra"
+    }
+  },
+  "CPU": "Info about the core",
+  "Node": "Info about the Node",
+  "Memory": "Info about the node memory",
+  "Net": "Info about the cluster network",
+  "RAM": {
+    "doc": "Info about estimated memory usage as in QE output",
+    "legenda": {
+      "static_per_process": "Static memory per process",
+      "max_per_process": "estimated max memory used per process",
+      "total": "estimated max total memory used",
+      "other keys": "single allocation max estimate as of QE output"
+    }
+  }
+}

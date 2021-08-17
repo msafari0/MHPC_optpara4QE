@@ -1,0 +1,43 @@
+&CONTROL
+calculation='scf'
+prefix='ni'
+restart_mode='from_scratch'
+title="'srtio_bulk'"
+tprnfor=.true.
+forc_conv_thr=3.d-5
+PSEUDO_DIR='/marconi/home/userexternal/czeni000/dft_src/pseudo/'
+verbosity='high'
+nstep=350
+/
+&SYSTEM
+IBRAV=2
+celldm(1) = 12.96
+NAT=8
+ntyp=1
+ECUTWFC=24
+ecutrho=288
+occupations='smearing', 
+smearing='marzari-vanderbilt', 
+degauss=0.02
+/
+&ELECTRONS
+startingpot='atomic'
+conv_thr=1.0e-8
+/
+&ions
+/
+&cell
+/
+ATOMIC_SPECIES
+ Ni 58.69 Ni.pz-nd-rrkjus.UPF
+ATOMIC_POSITIONS alat
+ Ni 0.0 0.0 0.0
+ Ni -0.25 0.25 0.5
+ Ni -0.25 0.5 0.25
+ Ni -0.5 0.25 0.25
+ Ni -0.25 0.25 0.0
+ Ni -0.25 0.0 0.25
+ Ni 0.0 0.25 0.25
+ Ni -0.5 0.5 0.5
+K_POINTS {automatic}
+ 4 4 4 1 1 1
