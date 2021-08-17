@@ -1,0 +1,1849 @@
+
+     Program PWSCF v.6.6 starts on 21Jun2021 at 19:28:58 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on     384 processor cores
+     Number of MPI processes:               192
+     Threads/MPI process:                     2
+
+     MPI processes distributed on     8 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =     192
+     Fft bands division:     nmany     =       1
+     Reading input from ../inputs/input_quarzo_36
+Warning: card &CELL ignored
+Warning: card / ignored
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     ELPA distributed-memory algorithm (size of sub-group: 13* 13 procs)
+
+     Found symmetry operation: I + (  0.5000  0.0000  0.0000)
+     This is a supercell, fractional translations are disabled
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          30      19      5                 1056      539      75
+     Max          31      20      6                 1063      546      80
+     Sum        5941    3811   1031               203635   104367   14891
+ 
+
+     Title: 
+     'srtio_bulk'                                                               
+
+
+     bravais-lattice index     =            8
+     lattice parameter (alat)  =      18.5722  a.u.
+     unit-cell volume          =    3051.0810 (a.u.)^3
+     number of atoms/cell      =           36
+     number of atomic types    =            2
+     number of electrons       =       192.00
+     number of Kohn-Sham states=           96
+     kinetic-energy cutoff     =      40.0000  Ry
+     charge density cutoff     =     250.0000  Ry
+     convergence threshold     =      1.0E-10
+     mixing beta               =       0.7000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= PBESOL
+                           (   1   4  10   8   0   0   0)
+
+     celldm(1)=  18.572236  celldm(2)=   0.866025  celldm(3)=   0.549959
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   0.866025   0.000000 )  
+               a(3) = (   0.000000   0.000000   0.549959 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.154701  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.818316 )  
+
+
+     PseudoPot. # 1 for Si read from file:
+     ./../pseudo/Si.pbesol-n-rrkjus_psl.0.1.UPF
+     MD5 check sum: 84986bd6be9e79932892c86d18f23292
+     Pseudo is Ultrasoft + core correction, Zval =  4.0
+     Generated using "atomic" code by A. Dal Corso v.5.0.2 svn rev. 9415
+     Using radial grid of 1141 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for O  read from file:
+     ./../pseudo/O.pbesol-n-rrkjus_psl.0.1.UPF
+     MD5 check sum: 860b55360c6eac1e4db712ce01d51bd8
+     Pseudo is Ultrasoft + core correction, Zval =  6.0
+     Generated using "atomic" code by A. Dal Corso v.5.0.2 svn rev. 9415
+     Using radial grid of 1095 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        Si             4.00    47.86700     Si( 1.00)
+        O              6.00    15.99940     O ( 1.00)
+
+      2 Sym. Ops. (no inversion) found
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     180 deg rotation - cart. axis [1,0,0]        
+
+ cryst.   s( 2) = (     1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 2) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+     point group C_2  (2)   
+     there are  2 classes
+     the character table:
+
+       E     C2   
+A      1.00  1.00
+B      1.00 -1.00
+
+     the symmetry operations in each class and the name of the first element:
+
+     E        1
+          identity                                               
+     C2       2
+          180 deg rotation - cart. axis [1,0,0]                  
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Si  tau(   1) = (   0.2355733   0.0000000   0.0000000  )
+         2           Si  tau(   2) = (   0.7355732   0.0000000   0.0000000  )
+         3           Si  tau(   3) = (   0.4837387   0.4330127   0.0000000  )
+         4           Si  tau(   4) = (   0.9837388   0.4330127   0.0000000  )
+         5           O   tau(   5) = (   0.1399319   0.7468191   0.0592770  )
+         6           O   tau(   6) = (   0.6399319   0.7468192   0.0592770  )
+         7           O   tau(   7) = (   0.3899565   0.3155350   0.0664827  )
+         8           O   tau(   8) = (   0.8899565   0.3155349   0.0664827  )
+         9           O   tau(   9) = (   0.3295200   0.0595910   0.1212084  )
+        10           O   tau(  10) = (   0.8295201   0.0595910   0.1212085  )
+        11           O   tau(  11) = (   0.0780996   0.4951179   0.1195981  )
+        12           O   tau(  12) = (   0.5780997   0.4951180   0.1195981  )
+        13           Si  tau(  13) = (   0.3830231   0.2012792   0.1849174  )
+        14           Si  tau(  14) = (   0.8830231   0.2012792   0.1849174  )
+        15           Si  tau(  15) = (   0.1325110   0.6368559   0.1814016  )
+        16           Si  tau(  16) = (   0.6325108   0.6368559   0.1814016  )
+        17           O   tau(  17) = (   0.0310675   0.1757255   0.2508372  )
+        18           O   tau(  18) = (   0.5310676   0.1757256   0.2508373  )
+        19           O   tau(  19) = (   0.2812343   0.6139809   0.2463042  )
+        20           O   tau(  20) = (   0.7812344   0.6139808   0.2463042  )
+        21           O   tau(  21) = (   0.0310675   0.6902999   0.2991221  )
+        22           O   tau(  22) = (   0.5310676   0.6902998   0.2991220  )
+        23           O   tau(  23) = (   0.2812343   0.2520445   0.3036551  )
+        24           O   tau(  24) = (   0.7812344   0.2520446   0.3036551  )
+        25           Si  tau(  25) = (   0.3830231   0.6647462   0.3650419  )
+        26           Si  tau(  26) = (   0.8830231   0.6647462   0.3650419  )
+        27           Si  tau(  27) = (   0.1325110   0.2291695   0.3685577  )
+        28           Si  tau(  28) = (   0.6325108   0.2291695   0.3685577  )
+        29           O   tau(  29) = (   0.3295200   0.8064344   0.4287509  )
+        30           O   tau(  30) = (   0.8295201   0.8064344   0.4287508  )
+        31           O   tau(  31) = (   0.0780996   0.3709075   0.4303612  )
+        32           O   tau(  32) = (   0.5780997   0.3709074   0.4303612  )
+        33           O   tau(  33) = (   0.1399319   0.1192063   0.4906823  )
+        34           O   tau(  34) = (   0.6399319   0.1192063   0.4906823  )
+        35           O   tau(  35) = (   0.3899565   0.5504904   0.4834766  )
+        36           O   tau(  36) = (   0.8899565   0.5504905   0.4834766  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1           Si  tau(   1) = (  0.2355733  0.0000000  0.0000000  )
+         2           Si  tau(   2) = (  0.7355732  0.0000000  0.0000000  )
+         3           Si  tau(   3) = (  0.4837387  0.5000000  0.0000000  )
+         4           Si  tau(   4) = (  0.9837388  0.5000000  0.0000000  )
+         5           O   tau(   5) = (  0.1399319  0.8623524  0.1077843  )
+         6           O   tau(   6) = (  0.6399319  0.8623525  0.1077843  )
+         7           O   tau(   7) = (  0.3899565  0.3643484  0.1208866  )
+         8           O   tau(   8) = (  0.8899565  0.3643484  0.1208866  )
+         9           O   tau(   9) = (  0.3295200  0.0688098  0.2203953  )
+        10           O   tau(  10) = (  0.8295201  0.0688098  0.2203953  )
+        11           O   tau(  11) = (  0.0780996  0.5717129  0.2174671  )
+        12           O   tau(  12) = (  0.5780997  0.5717130  0.2174673  )
+        13           Si  tau(  13) = (  0.3830231  0.2324172  0.3362383  )
+        14           Si  tau(  14) = (  0.8830231  0.2324172  0.3362384  )
+        15           Si  tau(  15) = (  0.1325110  0.7353779  0.3298455  )
+        16           Si  tau(  16) = (  0.6325108  0.7353778  0.3298456  )
+        17           O   tau(  17) = (  0.0310675  0.2029104  0.4561014  )
+        18           O   tau(  18) = (  0.5310676  0.2029104  0.4561016  )
+        19           O   tau(  19) = (  0.2812343  0.7089640  0.4478589  )
+        20           O   tau(  20) = (  0.7812344  0.7089640  0.4478590  )
+        21           O   tau(  21) = (  0.0310675  0.7970896  0.5438986  )
+        22           O   tau(  22) = (  0.5310676  0.7970896  0.5438984  )
+        23           O   tau(  23) = (  0.2812343  0.2910360  0.5521411  )
+        24           O   tau(  24) = (  0.7812344  0.2910360  0.5521410  )
+        25           Si  tau(  25) = (  0.3830231  0.7675828  0.6637617  )
+        26           Si  tau(  26) = (  0.8830231  0.7675828  0.6637616  )
+        27           Si  tau(  27) = (  0.1325110  0.2646221  0.6701545  )
+        28           Si  tau(  28) = (  0.6325108  0.2646222  0.6701544  )
+        29           O   tau(  29) = (  0.3295200  0.9311902  0.7796047  )
+        30           O   tau(  30) = (  0.8295201  0.9311902  0.7796047  )
+        31           O   tau(  31) = (  0.0780996  0.4282871  0.7825329  )
+        32           O   tau(  32) = (  0.5780997  0.4282870  0.7825327  )
+        33           O   tau(  33) = (  0.1399319  0.1376476  0.8922157  )
+        34           O   tau(  34) = (  0.6399319  0.1376475  0.8922157  )
+        35           O   tau(  35) = (  0.3899565  0.6356516  0.8791134  )
+        36           O   tau(  36) = (  0.8899565  0.6356516  0.8791134  )
+
+     number of k points=     8
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.2500000   0.1443376   0.2272895), wk =   0.2500000
+        k(    2) = (   0.2500000   0.1443376   0.6818686), wk =   0.2500000
+        k(    3) = (   0.2500000   0.4330127   0.2272895), wk =   0.2500000
+        k(    4) = (   0.2500000   0.4330127   0.6818686), wk =   0.2500000
+        k(    5) = (  -0.2500000   0.1443376  -0.2272895), wk =   0.2500000
+        k(    6) = (  -0.2500000   0.1443376  -0.6818686), wk =   0.2500000
+        k(    7) = (  -0.2500000   0.4330127  -0.2272895), wk =   0.2500000
+        k(    8) = (  -0.2500000   0.4330127  -0.6818686), wk =   0.2500000
+
+                       cryst. coord.
+        k(    1) = (   0.2500000   0.1250000   0.1250000), wk =   0.2500000
+        k(    2) = (   0.2500000   0.1250000   0.3750000), wk =   0.2500000
+        k(    3) = (   0.2500000   0.3750000   0.1250000), wk =   0.2500000
+        k(    4) = (   0.2500000   0.3750000   0.3750000), wk =   0.2500000
+        k(    5) = (  -0.2500000   0.1250000  -0.1250000), wk =   0.2500000
+        k(    6) = (  -0.2500000   0.1250000  -0.3750000), wk =   0.2500000
+        k(    7) = (  -0.2500000   0.3750000  -0.1250000), wk =   0.2500000
+        k(    8) = (  -0.2500000   0.3750000  -0.3750000), wk =   0.2500000
+
+     Dense  grid:   203635 G-vectors     FFT dimensions: (  96,  81,  54)
+
+     Smooth grid:   104367 G-vectors     FFT dimensions: (  75,  72,  45)
+
+     Dynamical RAM for                 wfc:       0.10 MB
+
+     Dynamical RAM for     wfc (w. buffer):       0.88 MB
+
+     Dynamical RAM for           str. fact:       0.03 MB
+
+     Dynamical RAM for           local pot:       0.00 MB
+
+     Dynamical RAM for          nlocal pot:       0.29 MB
+
+     Dynamical RAM for                qrad:       0.73 MB
+
+     Dynamical RAM for          rho,v,vnew:       0.23 MB
+
+     Dynamical RAM for               rhoin:       0.08 MB
+
+     Dynamical RAM for            rho*nmix:       0.26 MB
+
+     Dynamical RAM for           G-vectors:       0.06 MB
+
+     Dynamical RAM for          h,s,v(r/c):       0.01 MB
+
+     Dynamical RAM for          <psi|beta>:       0.42 MB
+
+     Dynamical RAM for                 psi:       0.20 MB
+
+     Dynamical RAM for                hpsi:       0.20 MB
+
+     Dynamical RAM for                spsi:       0.20 MB
+
+     Dynamical RAM for      wfcinit/wfcrot:       0.77 MB
+
+     Dynamical RAM for           addusdens:       1.08 MB
+
+     Dynamical RAM for          addusforce:       1.86 MB
+
+     Estimated static dynamical RAM per process >       2.91 MB
+
+     Estimated max dynamical RAM per process >       4.76 MB
+
+     Estimated total dynamical RAM >     914.71 MB
+     Message from routine sym_rho_init:
+     some processors have no G-vectors for symmetrization
+     Message from routine sym_rho_init:
+     some processors have no G-vectors for symmetrization
+     Message from routine sym_rho_init:
+     some processors have no G-vectors for symmetrization
+     Message from routine sym_rho_init:
+     some processors have no G-vectors for symmetrization
+     Message from routine sym_rho_init:
+     some processors have no G-vectors for symmetrization
+     Message from routine sym_rho_init:
+     some processors have no G-vectors for symmetrization
+     Message from routine sym_rho_init:
+     some processors have no G-vectors for symmetrization
+
+     Check: negative core charge=   -0.000375
+
+     Initial potential from superposition of free atoms
+
+     starting charge  191.99348, renormalised to  192.00000
+     Starting wfcs are  144 randomized atomic wfcs
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+
+     total cpu time spent up to now is        3.0 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    40.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+ Cannot solve with ELPA 1stage
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine  cdiaghg (97):
+      problems computing cholesky
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
