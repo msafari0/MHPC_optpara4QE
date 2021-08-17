@@ -238,7 +238,6 @@ def read_nkpoints(fname):
 
 
 def get(fname, algoname='davidson', other_info=None):
-    print(fname)
     dims = read_dimensions(fname)
     if dims is None:
         print("No dims for this file", fname)
