@@ -69,7 +69,7 @@ def clean_marconi_data(filename, architecture_id=0):
 
     cname = 'computational_complexity'
     tname = 'time_per_call'
-    norm_tname = '$\dfrac{t \cdot N_{cores}}{N_{call} N_{e}^3 N_{k} }$'
+    norm_tname = 'normalized_time_per_call'
 
     # Flatten all nested dictionaries
     data = [flatten_dict(d) for d in data]
@@ -137,7 +137,7 @@ def clean_chemistry_data(filename, column_order, architecture_id = 1):
 
     cname = 'computational_complexity'
     tname = 'time_per_call'
-    norm_tname = '$\dfrac{t \cdot N_{cores}}{N_{call} N_{e}^3 N_{k} }$'
+    norm_tname = 'normalized_time_per_call'
     data = data[data['smoothgrid'] != "E"]
     data = data.dropna(subset=['timer'])
     data = data[data['timer'].astype(np.float) < 15000]

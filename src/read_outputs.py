@@ -10,15 +10,15 @@ def tot_string(s):
 def read_betas(fname):
     with open(fname, 'r') as f:
         l_ = f.readlines()
-
-    index_start = [i+6 for i, _ in enumerate(l_) if 'PseudoPot. #' in _]
+    index_start = [i+1 for i,
+                   _ in enumerate(l_) if 'Using radial grid of ' in _]
     index_end = [i for i, _ in enumerate(l_) if 'Q(r) pseudized with' in _]
     all_orbs = ''
     nbetas = ''
     for s, e in zip(index_start, index_end):
+        nbeta = "|%s|" % (l_[s-1].split()[6])
         orbs = ["|%s|" % (_.split()[2]) for _ in l_[s:e]]
         all_orbs += "".join(orbs)
-        nbeta = "|%s|" % (l_[s-1].split()[6])
         nbetas += nbeta
     return nbetas, all_orbs
 
@@ -286,7 +286,7 @@ def create_json(folder, inname="out_*", outname="data.json", other_info={
     "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
     "Node": "2*24-core",
     "Memory": "192 GB DDR4 RAM",
-    "Net": "Intel OmniPath (100Gb/s) high-performance network"}):
+        "Net": "Intel OmniPath (100Gb/s) high-performance network"}):
 
     pathre = folder + inname
     data = (get(n, other_info=other_info) for n in glob.glob(pathre))
