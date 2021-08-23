@@ -59,7 +59,7 @@ class TimePerCall():
                      epochs=25, validation_split=0.2):
         df_normx = self.normalize_x(x)
         df_normy = self.normalize_y(y)
-        self.train(df_normx, df_normy)
+        self.train(df_normx, df_normy, epochs, validation_split)
 
     def predict_normed(self, x):
         Y_hat = self.predict(self.normalize_x(x))

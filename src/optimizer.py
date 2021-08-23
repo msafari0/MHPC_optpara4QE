@@ -1,7 +1,13 @@
-from ann_model import TimePerCall
-import numpy as np
 import itertools
+import tensorflow as tf
+
+import numpy as np
 import pandas as pd
+
+from ann_model import TimePerCall
+
+tf.get_logger().setLevel('ERROR')
+pd.options.mode.chained_assignment = None  # To avoid ugly warngings
 
 
 def optimize(model, nel, nsp, nat, ntrans, nlanth, nks, ngsmooth,
@@ -12,7 +18,8 @@ def optimize(model, nel, nsp, nat, ntrans, nlanth, nks, ngsmooth,
 
     tpns = np.array([1, 2, 4, 6, 8])
     ncores = nnodes*corespernode
-    npools = 1+np.arange(nnodes)
+    npools = np.array([2**x for x in np.arange(10)])
+    npools = npools[npools <= nnodes]
     x_ = np.array([a for a in itertools.product(tpns, npools)])
     X = np.zeros((len(x_), 13+x_.shape[1]))
     X[:, 12] = x_[:, 0]
