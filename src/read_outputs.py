@@ -119,9 +119,12 @@ def read_parallel(filename):
         res.update({'npool': int(linetoread.split()[-1])})
     except IndexError:
         res.update({'npool': 1})
-    linetoread = [_ for _ in l_ if "R & G space division:" in _][0]
-    r_n_g = int(linetoread.split()[-1])
-    res.update({'n_RG': r_n_g})
+    try:
+        linetoread = [_ for _ in l_ if "R & G space division:" in _][0]
+        r_n_g = int(linetoread.split()[-1])
+        res.update({'n_RG': r_n_g})
+    except IndexError:
+        r_n_g = 1
     linetoread = [_ for _ in l_ if "wavefunctions fft division:" in _]
     if len(linetoread) == 0:
         wfc_fftdiv = (1, r_n_g)
@@ -240,7 +243,7 @@ def read_nkpoints(fname):
 def get(fname, algoname='davidson', other_info=None):
     dims = read_dimensions(fname)
     if dims is None:
-        print("No dims for this file", fname)
+        # print("No dims for this file", fname)
         return None
     nk = read_nkpoints(fname)
     if nk is None:

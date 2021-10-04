@@ -82,11 +82,22 @@ def clean_marconi_data(filename, architecture_id=0):
     df['n_transition'] = transition
     df['n_betas'] = [compute_nbetas(nl, nb, na) for nl, nb, na in zip(
         df['Nl'], df['Nbeta'], df['NatomsType'])]
-    df = df.drop(index=738)  # Remove an outlier
+    # df = df.drop(index=738)  # Remove an outlier
 
+    # The first column is alwyas the target
+    columns_to_keep = [norm_tname, 'iter_sum_band', tname, 'n_el',
+                       'n_el^3', 'n_species', 'dims_nat', 'n_transition',
+                       'n_lanthanid', 'dims_nbands', 'convergence',
+                       'smooth_grid_rec', 'dims_nkpoints', 'n_betas',
+                       'n_cores', 'n_nodes', 'threads_per_node', 'dims_npool']
+
+    if df['Node'].values[0] == '2*24-core':
+        corespernode = 48
+    elif df['Node'].values[0] == '32-core':
+        corespernode = 32
     df_ = pd.DataFrame()
     for c in list(df.columns):
-        if len(df[c].unique()) > 1 or c == 'n_lanthanid':
+        if len(df[c].unique()) > 1 or c in columns_to_keep:
             try:
                 df_[c] = df[c].astype('float')
             except ValueError:
@@ -96,17 +107,12 @@ def clean_marconi_data(filename, architecture_id=0):
     df_[tname] = df_['clocks_PWSCF']*(1/df_['iter_sum_band'])
 
     df_['n_cores'] = df_['threads_per_node']*df_['dims_MPI tasks']
-    df_['n_nodes'] = df_['n_cores']//48
+    df_['n_nodes'] = df_['n_cores']//corespernode
     df_['n_el^3'] = df_['n_el']**3
     df_[cname] = df_['n_el^3']*df_['dims_nkpoints']/df_['n_cores']
     df_[norm_tname] = df_[tname]/df_[cname]
 
-    # The first column is alwyas the target
-    columns_to_keep = [norm_tname, 'iter_sum_band', tname, 'n_el',
-                       'n_el^3', 'n_species', 'dims_nat', 'n_transition',
-                       'n_lanthanid', 'dims_nbands', 'convergence',
-                       'smooth_grid_rec', 'dims_nkpoints', 'n_betas',
-                       'n_cores', 'n_nodes', 'threads_per_node', 'dims_npool']
+
 
     df_tot = pd.DataFrame()
     for c in columns_to_keep:
@@ -131,7 +137,7 @@ def clean_marconi_data(filename, architecture_id=0):
     return df_tot
 
 
-def clean_chemistry_data(filename, column_order, architecture_id = 1):
+def clean_chemistry_data(filename, column_order, architecture_id=2):
 
     data = pd.read_csv(filename)
 
