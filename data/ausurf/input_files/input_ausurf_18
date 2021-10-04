@@ -1,0 +1,53 @@
+&CONTROL
+  title = ' Ausurf',
+  calculation = 'scf',
+  restart_mode = 'from_scratch', ! 'restart',
+  tprnfor = .TRUE.,
+  etot_conv_thr = 1.d-8,
+  prefix = 'ausurf'
+  PSEUDO_DIR='/marconi/home/userexternal/czeni000/dft_src/pseudo/'
+  outdir = './'
+  disk_io = 'none'
+/
+
+&SYSTEM
+  ibrav = 8, 
+  A =  2.950 
+  B =  5.109549882328187 
+  C =  31.677984223631125 
+  nat = 18,
+  ntyp = 1, 
+  ecutwfc = 40.0,
+  ecutrho = 350.0,
+  occupations='smearing', smearing='marzari-vanderbilt', degauss=0.05
+/
+
+&ELECTRONS
+    diagonalization='david'
+    mixing_beta = 0.7
+    mixing_mode='TF'
+/
+ATOMIC_SPECIES
+Au  196.96  Au.pbe-nd-van.UPF  
+ATOMIC_POSITIONS (angstrom)
+Au     0.000000     0.000000     0.000000 
+Au     1.475000     0.851592     2.408665 
+Au     2.950000     3.406367     2.408665 
+Au     2.950000     1.703183     4.817330 
+Au     1.475000     4.257958     4.817330 
+Au     0.000000     0.000000     7.225995 
+Au     1.475000     2.554775     7.225995 
+Au     1.475000     0.851592     9.634660 
+Au     2.950000     3.406367     9.634660 
+Au     2.950000     1.703183    12.043325 
+Au     1.475000     4.257958    12.043325 
+Au     0.000000     0.000000    14.451989 
+Au     1.475000     2.554775    14.451989 
+Au     1.475000     0.851592    16.860654 
+Au     2.950000     3.406367    16.860654 
+Au     2.950000     1.703183    19.269319 
+Au     1.475000     4.257958    19.269319 
+Au     1.475000     2.554775    21.677984 
+K_POINTS (automatic)
+16 12 1 1 1 0
+
