@@ -2,16 +2,16 @@ import json
 import pandas as pd
 import numpy as np
 import collections.abc
+from collections.abc import MutableMapping
 from ase.data import atomic_numbers
 
 elements = list(atomic_numbers.keys())
-
 
 def flatten_dict(d, parent_key='', sep='_'):
     items = []
     for k, v in d.items():
         new_key = parent_key + sep + k if parent_key else k
-        if isinstance(v, collections.MutableMapping):
+        if isinstance(v, MutableMapping):  # Use collections.abc.MutableMapping
             items.extend(flatten_dict(v, new_key, sep=sep).items())
         else:
             if type(v) == list:
@@ -26,11 +26,12 @@ def flatten_dict(d, parent_key='', sep='_'):
                 items.append((new_key, v))
     return dict(items)
 
+#2. compute useful parameters:  Feature Engineering 
 
 def compute_nbetas(NL, NBETA, NATOMSTYPE):
     nl = np.array(NL.split('|')[1::2], dtype='int')
     betas_per_elements = np.array(NBETA.split('|')[1::2], dtype='int')
-    natom_per_element = np.array(NATOMSTYPE.split('|')[3::4], dtype=np.float)
+    natom_per_element = np.array(NATOMSTYPE.split('|')[3::4], dtype=float)
     nelements = len(betas_per_elements)
     natoms_list = [np.repeat(natom_per_element[i], betas_per_elements[i])
                    for i in range(nelements)]
@@ -41,7 +42,6 @@ def compute_nbetas(NL, NBETA, NATOMSTYPE):
     except:
         return np.sum(2*nl+1 * natom_per_element[0])
     return tot_betas
-
 
 def count_lanth_trans(data):
     lanthanid = np.zeros(len(data))
@@ -222,3 +222,79 @@ def clean_chemistry_data(filename, column_order, architecture_id=2):
     del df_el
 
     return df
+
+
+def clean_data(filename):
+
+    # Load JSON data
+    with open(filename) as f:
+        data = json.load(f)
+
+    cname = 'computational_complexity'
+    tname = 'time_per_call'
+    norm_tname = 'normalized_time_per_call'
+
+    # Flatten all nested dictionaries
+    data = [flatten_dict(d) for d in data]
+    df = pd.DataFrame.from_dict(data).drop(0)
+    df = df.rename(columns={'dims_Threads': 'threads_per_node'})
+
+    # Calculate derived features
+    lanthanid, transition = count_lanth_trans(df)
+    df['n_lanthanid'] = lanthanid
+    df['n_transition'] = transition
+    #print(df[['Nl', 'Nbeta', 'NatomsType']].head())
+    df['n_betas'] = [compute_nbetas(nl, nb, na) for nl, nb, na in zip(
+        df['Nl'], df['Nbeta'], df['NatomsType'])]
+    # The first column is always the target
+    columns_to_keep = [norm_tname, 'iter_sum_band', tname, 'n_el',
+                       'n_el^3', 'n_species', 'dims_nat', 'n_transition',
+                       'n_lanthanid', 'dims_nbands', 'convergence',
+                       'smooth_grid_rec', 'dims_nkpoints', 'n_betas',
+                       'n_cores', 'n_nodes', 'threads_per_node', 'dims_npool']
+
+    if df['Platform'].values[0] == 'Leonardo-booster':
+        corespernode = 32
+
+    # Create a dictionary for columns to keep or calculate
+    columns_to_add = {}
+    for c in df.columns:
+        if len(df[c].unique()) > 1 or c in columns_to_keep:
+            try:
+                columns_to_add[c] = pd.to_numeric(df[c], errors='coerce')  # Coerce non-numeric to NaN
+            except ValueError:
+                pass
+
+    # Add calculated features directly to the dictionary
+    columns_to_add[tname] = columns_to_add.get('clocks_PWSCF', 0) * (
+        1 / columns_to_add.get('iter_sum_band', 1)
+    )
+    columns_to_add['n_cores'] = columns_to_add.get('threads_per_node', 0) * columns_to_add.get('dims_MPI tasks', 1)
+    columns_to_add['n_nodes'] = columns_to_add['n_cores'] // corespernode
+    columns_to_add['n_el^3'] = columns_to_add['n_el'] ** 3
+    columns_to_add[cname] = columns_to_add['n_el^3'] * columns_to_add['dims_nkpoints'] / columns_to_add['n_cores']
+    columns_to_add[norm_tname] = columns_to_add[tname] / columns_to_add[cname]
+
+    # Create a DataFrame from the collected columns
+    df_ = pd.DataFrame(columns_to_add)
+
+    # Finalize the DataFrame
+    df_tot = df_[columns_to_keep]
+    df_tot = df_tot.rename(columns={'iter_sum_band': 'n_calls',
+                                    'dims_npool': 'n_pool',
+                                    'dims_nkpoints': 'n_k',
+                                    'dims_nat': 'n_at',
+                                    'dims_nbands': 'n_ks',
+                                    'smooth_grid_rec': 'n_g_smooth'})
+
+   # df_tot['arch'] = architecture_id
+
+    # Handle element-specific data
+    df_el = pd.DataFrame(index=df_tot.index, columns=elements)
+    df_el.loc[df_el.index, elements] = 0  # Initialize all elements to 0
+    if 'pseudo' in df.columns:  # Ensure 'pseudo' exists
+        df_el[df.pseudo.str.get_dummies().columns] = df.pseudo.str.get_dummies().values
+
+    df_tot = pd.concat([df_tot, df_el], axis=1)
+    del df_el, df
+    return df_tot

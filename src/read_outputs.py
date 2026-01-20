@@ -1,26 +1,110 @@
 from collections import deque, Counter
 import json
 import glob
-
+import argparse
+import os
 
 def tot_string(s):
     return s.split('CPU')[-1].replace('WALL', '').strip().replace(' ', '')
 
+def is_qe_output_file(filepath):
+    """Check if a file is a Quantum ESPRESSO output by inspecting its start and end content."""
+    try:
+        with open(filepath, 'r') as file:
+            # Check the first few lines for the start marker
+            for _ in range(10):
+                line = file.readline()
+                if "Program PWSCF" in line:
+                    break
+            else:
+                return False  # If the loop finishes without finding the marker
+
+        # Now check the end of the file for the termination marker "JOB DONE"
+        with open(filepath, 'rb') as file:
+            file.seek(0, os.SEEK_END)
+            position = file.tell()
+
+            # Define a reasonable number of lines to check from the end
+            lines_to_check = 50
+            buffer_size = 1024  # Read in chunks of 1KB
+            lines = []
+            while position > 0 and lines_to_check > 0:
+                position -= buffer_size
+                if position < 0:
+                    position = 0
+                file.seek(position)
+                chunk = file.read(buffer_size)
+
+                # Break the chunk into lines and prepend them to the list
+                lines = chunk.splitlines() + lines
+
+                # Count the lines from the end
+                lines_to_check -= len(lines)
+
+                # If we've read enough lines, stop
+                if lines_to_check <= 0:
+                    break
+
+            # Check the last few lines for the "JOB DONE" marker
+            for line in reversed(lines):
+                if b"JOB DONE" in line:
+                    return True
+
+    except (UnicodeDecodeError, OSError):
+        return False
+
+    return False
 
 def read_betas(fname):
     with open(fname, 'r') as f:
-        l_ = f.readlines()
-    index_start = [i+1 for i,
-                   _ in enumerate(l_) if 'Using radial grid of ' in _]
-    index_end = [i for i, _ in enumerate(l_) if 'Q(r) pseudized with' in _]
-    all_orbs = ''
-    nbetas = ''
-    for s, e in zip(index_start, index_end):
-        nbeta = "|%s|" % (l_[s-1].split()[6])
-        orbs = ["|%s|" % (_.split()[2]) for _ in l_[s:e]]
-        all_orbs += "".join(orbs)
-        nbetas += nbeta
-    return nbetas, all_orbs
+        lines = f.readlines()
+
+    # Identify the start indices for beta sections
+    index_start = [i + 1 for i, line in enumerate(lines) if 'Using radial grid of' in line]
+    index_end = []
+
+    # Determine the end markers for each block
+    for start_idx in index_start:
+        end_idx = next(
+            (i for i in range(start_idx, len(lines))
+             if ('Q(r) pseudized with' in lines[i] or
+                 'PseudoPot.' in lines[i] or
+                 'atomic species' in lines[i] or
+                 'Sym. Ops.' in lines[i])),
+             None  # None indicates no valid end marker found
+        )
+        index_end.append(end_idx)
+
+    # If no valid beta sections are found, discard the file
+    if not index_start or not index_end:
+        print(f"File {fname} discarded: Missing beta sections.")
+        return None, None
+
+    nbetas = ""
+    all_orbs = ""
+
+    # Extract beta information
+    for start, end in zip(index_start, index_end):
+        beta_lines = lines[start:end]
+
+        # If a block has no valid beta function lines, discard the file
+        if not any('l(' in line for line in beta_lines):
+            print(f"File {fname} discarded: Missing beta functions.")
+            return None, None
+
+        # Count beta functions and construct `nbetas`
+        n_beta = sum(1 for line in beta_lines if 'l(' in line)
+        nbetas += f"{n_beta}|"
+
+        # Extract orbital information
+        for line in beta_lines:
+            if 'l(' in line:
+                orb = line.strip().split('=')[-1]
+                all_orbs += f"{orb}|"
+
+    return nbetas.strip('|'), all_orbs.strip('|')
+
+
 
 
 def read_additional_info(fname):
@@ -139,50 +223,77 @@ def read_parallel(filename):
         res.update({'ndiag': 1})
     return res
 
-
 def read_gridinfo(filename, stringa):
     """
+    Reads grid info from a file.
+    
     filename: str path of the file to open
-    stringa:  str string to search for selecting the line
+    stringa: str string to search for selecting the line
     """
     with open(filename, 'r') as f:
-        r = deque(filter(lambda _: stringa in _, iter(f)))[0]
-    temp1, temp2 = r.split(":")[1], r.split(":")[2]
-    grid_vecs = int(temp1.split()[0])
-    temp2 = temp2.replace('(', ' ').replace(')', ' ').replace(',', ' ')
-    fft_dims = tuple((int(_) for _ in temp2.split()))
-    return {"ngrid_vecs": grid_vecs, "fft_dims": fft_dims}
-
+        # Filter lines that match the target string
+        matching_lines = list(filter(lambda _: stringa in _, iter(f)))
+      #  print(f"Matching lines for '{stringa}' in file '{filename}': {matching_lines}")
+        
+        # Handle the case where no matching line is found
+        if not matching_lines:
+           # print(f"No lines found for '{stringa}' in file: {filename}")
+            return None
+        
+        # Use the first matching line
+        r = matching_lines[0]
+    
+    try:
+        # Extract grid info
+        temp1, temp2 = r.split(":")[1], r.split(":")[2]
+        grid_vecs = int(temp1.split()[0])
+        temp2 = temp2.replace('(', ' ').replace(')', ' ').replace(',', ' ')
+        fft_dims = tuple((int(_) for _ in temp2.split()))
+        return {"ngrid_vecs": grid_vecs, "fft_dims": fft_dims}
+    except (IndexError, ValueError) as err:
+        # Catch errors during line processing
+        print(f"Error processing line: {r} in file: {filename}")
+        print(f"Error: {err}")
+        return None
 
 def read_dimensions(filename):
+    """
+    Reads relevant calculation dimensions from a Quantum Espresso output file.
+    
+    filename: str path of the file to open
+    """
     with open(filename, 'r') as f:
         l_ = f.readlines()
-    s = "number of atoms/cell"
-    try:
-        r = [_ for _ in l_ if s in _][0]
-    except IndexError:
+    
+    # Initialize results dictionary
+    res = {}
+    
+    # Extract various dimensions and parameters
+    key_phrases = {
+        "nat": "number of atoms/cell",
+        "nbands": "number of Kohn-Sham states=",
+        "ecutwfc": "kinetic-energy cutoff",
+        "ecutrho": "charge density cutoff",
+        "vol": "unit-cell volume"
+    }
+    
+    for key, phrase in key_phrases.items():
+        try:
+            line = next(_ for _ in l_ if phrase in _)
+            value = float(line.split()[-2]) if "ecut" in key or "vol" in key else int(line.split()[-1])
+            res[key] = value
+        except StopIteration:
+            res[key] = None  # Handle missing data
+    
+    # Read dense and smooth grid information
+    res["Dense_grid"] = read_gridinfo(filename, "Dense  grid:")
+    res["Smooth_grid"] = read_gridinfo(filename, "Smooth grid:")
+    
+    # Check if Smooth_grid is missing or identical to Dense_grid
+    if res["Smooth_grid"] is None or res["Smooth_grid"] == res["Dense_grid"]:
+        print(f"Skipping file {filename}: Smooth grid is missing or identical to Dense grid.")
         return None
-    res = {'nat': int(r.split()[-1])}
-    s = "number of Kohn-Sham states="
-    try:
-        r = [_ for _ in l_ if s in _][0]
-    except IndexError:
-        return None
-    res.update({'nbands': int(r.split()[-1])})
-    s = "kinetic-energy cutoff"
-    r = [_ for _ in l_ if s in _][0]
-    res.update({'ecutwfc': float(r.split()[-2])})
-    s = "charge density cutoff"
-    r = [_ for _ in l_ if s in _][0]
-    res.update({'ecutrho': float(r.split()[-2])})
-    s = "unit-cell volume"
-    r = [_ for _ in l_ if s in _][0]
-    res.update({'vol': float(r.split()[-2])})
-    dense_fft_dims = read_gridinfo(filename, "Dense  grid:")
-    smooth_fft_dims = read_gridinfo(filename, "Smooth grid:")
-    res.update({"Dense_grid": dense_fft_dims, "Smooth_grid": smooth_fft_dims})
-    with open(filename, 'r') as f:
-        r = deque(filter(lambda _: "Smooth grid:" in _, iter(f)))[0]
+    
     return res
 
 
@@ -284,18 +395,108 @@ def get(fname, algoname='davidson', other_info=None):
         data1.update({"RAM": raminfo})
     return data1
 
+#_____________This function is for adding identikeep info to NN input. 
 
-def create_json(folder, inname="out_*", outname="data.json", other_info={
-    "CPU": "Intel Xeon 8160 CPU @ 2.10GHz",
-    "Node": "2*24-core",
-    "Memory": "192 GB DDR4 RAM",
-        "Net": "Intel OmniPath (100Gb/s) high-performance network"}):
+def extract_other_info(sysinfo_path, platform='Leonardo-booster'):
+    """Extracts relevant hardware information from sysinfo.json."""
+    with open(sysinfo_path, 'r') as file:
+        sysinfo = json.load(file)
 
-    pathre = folder + inname
-    data = (get(n, other_info=other_info) for n in glob.glob(pathre))
-    data = [_ for _ in filter(None, data)]
+    # Initialize variables to collect information
+    cpu_models = set()
+    gpu_count = 0
+    gpu_devices =set()
+    total_memory_kb = 0
+    node_count = len(sysinfo.get('NodeList', []))
+    # Iterate through nodes and processes to gather information
+    for node in sysinfo.get('NodeList', []):
 
+        for proc in node.get('ProcList', []):
+   
+            cpu_info = proc.get('CPU', {})
+            # Collect CPU models (unique entries)
+            cpu_models.update(cpu_info.get('cpuModel', {}).get('value', []))
+            
+            # Extract memory information
+            if proc.get('GlobalRank') == 0:
+                mem_info = proc.get('MEM', {})
+                mem_total_list = mem_info.get('memTotal', {}).get('value', [])
+                if mem_total_list:  # Check if the list is not empty
+                    total_memory_kb += mem_total_list[0]  # Add the first element of the list
+                gpu_info = proc.get('CUDA', {})
+                gpu_count = len(gpu_info.get('cudaDevice', {}).get('value', []))
+                gpu_devices.update(gpu_info.get('cudaDevice', {}).get('value', []))
+    # Convert total memory from kilobytes to gigabytes
+    total_memory_gb = total_memory_kb / (1024 * 1024)  # Convert KB to GB
+
+    # Use the first CPU model found or a default value if none found
+    cpu_model = next(iter(cpu_models), "Unknown CPU Model")
+    #node_info = f"{node_count}*{cpu_model}"
+    
+    gpu_device = next(iter(gpu_devices), "Unknown GPU Device")
+    node_info = f"{node_count}*{cpu_model}, GPU:{gpu_count}*{gpu_device}"
+    other_info = {
+        "Platform": platform,
+        "CPU": cpu_model,
+        "Node": node_info,
+        "Memory": f"{total_memory_gb:.2f} GB DDR4 RAM"
+    }
+
+    return other_info
+#_______________________________________________________________
+
+def create_json(folder="./", outname="data.json", platform='Leonardo-booster', algoname='davidson'):
+    """
+    Extracts and compiles data from QE output files into a JSON file.
+
+    folder: str, path to the directory containing QE output files
+    outname: str, name of the output JSON file
+    platform: str, platform name for metadata
+    algoname: str, algorithm name for metadata
+    """
+    # Load other_info from 'sysinfo.json' in the folder
+    sysinfo_path = os.path.join(folder, 'sysinfo.json')
+    if os.path.isfile(sysinfo_path):
+        other_info = extract_other_info(sysinfo_path, platform)
+    else:
+        other_info = {"Platform": platform}
+    
+    # Automatically recognize QE output files by inspecting content
+    qe_files = [f for f in glob.glob(os.path.join(folder, '*')) if is_qe_output_file(f)]
+    
+    if not qe_files:
+        print(f"Error: No complete QE output files found in the specified directory: {folder}")
+        print("Please ensure that the required QE output files are present and properly terminated.")
+        return
+
+    # Process files: filter invalid files and process valid files using `get`
+    data = []
+    for filename in qe_files:
+        result = read_dimensions(filename)
+        if result is not None:  # Skip files where Smooth grid is missing or invalid
+            enriched_result = get(filename, algoname=algoname, other_info={**result, **other_info})
+            if enriched_result:  # Filter out invalid results from `get`
+                data.append(enriched_result)
+
+    # Save the filtered data to a JSON file
     with open(outname, 'w') as fw:
         json.dump(data, fw, indent=2)
-
+    
+    print(f"Data successfully saved to {outname}")
     return data
+   
+
+def nnimake_qe():
+    parser = argparse.ArgumentParser(description="Create a JSON file by processing all files in a directory.")
+    parser.add_argument('--folder', type=str, default='./', help='The directory containing input files  (default: ./ )')
+    parser.add_argument('--outname', type=str, default='data.json', help='Output JSON filename (default: data.json)')
+    parser.add_argument('--platform', type=str, default='Leonardo-booster', help='Name of supercomputer or platform you have used (default: Leonardo-booster)')
+    parser.add_argument('--algoname', type=str, default='davidson', help='Algorithm name to be used (default: davidson)')
+
+    args = parser.parse_args()
+
+    create_json(args.folder, outname=args.outname, platform=args.platform, algoname=args.algoname)
+
+if __name__ == "__main__":
+    nnimake_qe()
+
