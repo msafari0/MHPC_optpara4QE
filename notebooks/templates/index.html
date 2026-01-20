@@ -1,0 +1,567 @@
+{% extends 'base1.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction App</title>
+<style>
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 180px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+}
+
+/* Main action buttons (Choose / Upload / Predict) */
+.custom-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.08s;
+}
+.custom-btn:hover { background-color: #0056b3; transform: translateY(-1px); }
+
+/* Small red remove buttons (used for QE remove and per-file remove) */
+.remove-btn {
+  background-color: white;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 999px;       /* pill / circular look */
+  min-width: 30px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.remove-btn:hover { background-color: white; }
+
+/* file list styling */
+#fileList { margin-top:8px; padding-left:1.1rem; }
+#fileList li { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+#fileList li span.name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 48ch; }
+
+/*  other parts */
+  .form-row {
+    display: flex;
+    gap: 20px;             /* spacing between inputs in a row */
+    margin-bottom: 20px;   /* spacing below each row */
+  }
+
+  input {
+    flex: 1;               /* let inputs grow to fill row equally */
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  details summary {
+  cursor: pointer;
+  padding: 5px 0;
+  font-weight: bold;
+  }
+
+  details p, details ul {
+  margin-left: 15px;
+  }
+
+</style>
+
+
+  </head>
+  <body>
+    <div class="login" style="margin-bottom: 20px;">
+      <h1 style="color: olive">Predicting time: SCF</h1>
+      
+      <form id="predictionForm">
+          <label for="supercomputer">Select supercomputer:</label>
+          <select name="supercomputer" id="supercomputer" required>
+          <option value="Leonardo_Booster">Leonardo Booster</option>
+          <!--option value="Galileo100">Galileo100</option--!>
+          <!--option value="Marconi100">Marconi100</option--!>
+          </select><br>
+<hr />
+<h3>Upload a Quantum ESPRESSO input file:</h3>
+<input type="file" id="qeFile" accept=".txt,.in,.inp,.pw,.qe,*/*" style="display:none;" />
+<button type="button" id="qeBtn" class="custom-btn">Choose file</button>
+<span id="qeStatus" style="margin-left:8px;"></span>
+<button type="button" id="qeRemoveBtn" class="remove-btn" style="display:none; margin-left:8px;">✖</button>
+
+<h3>Upload corresponding pseudopotential files (.UPF):</h3>
+<input type="file" id="pseudoFiles" accept=".UPF,.upf" multiple style="display:none;" />
+<button type="button" id="pseudoBtn" class="custom-btn">Choose files</button>
+<span id="pseudoStatus" style="margin-left:8px;"></span>
+<ul id="fileList"></ul>
+
+<h3>Specify computational resources for prediction:</h3>
+
+<div class="form-row">
+  <div class="form-group">
+    <label for="n_cores">Number of cores</label>
+    <input type="number" id="n_cores" name="n_cores" required min="1" />
+  </div>
+
+  <div class="form-group">
+    <label for="n_nodes">Number of nodes</label>
+    <input type="number" id="n_nodes" name="n_nodes" required min="1" />
+  </div>
+
+  <div class="form-group">
+    <label for="threads_per_node">Threads per node</label>
+    <input type="number" id="threads_per_node" name="threads_per_node" required min="1" />
+  </div>
+
+  <div class="form-group">
+    <label for="n_pool">n_pool</label>
+    <input type="number" id="n_pool" name="n_pool" required min="1" />
+  </div>
+</div>
+
+
+<button type="button" onclick="uploadQE()" class="custom-btn">
+  Upload QE Input & Predict
+</button>
+<p id="qeResult" style="margin-top: 10px; font-weight: bold;"></p>
+
+      </form>
+     
+    </div>
+
+    <hr />
+
+<div class="help-section">
+<h3> ⚙️  QE Prediction Guide </h3>
+  <p>
+    This tool uses a trained <b>Neural Network</b> model to estimate the
+    <b>time per SCF call</b> for your <b>Quantum ESPRESSO</b> calculations.
+    The prediction is based on your QE input file, pseudopotentials, and
+    <b>system parameters</b>.
+  </p>
+
+  <p>
+    <b>System parameters</b> describe the computational setup used for your
+    calculation. Please specify them according to the machine or configuration
+    you plan to run on:
+  </p>
+
+  <ul>
+    <li>
+      <b>Number of cores</b> – total number of cores used in the calculation (MPI × OpenMP).
+      It affects the overall parallelization and speedup.
+    </li>
+    <li>
+      <b>Number of nodes</b> – number of compute nodes allocated for the job.
+      Each node typically contains several cores and memory resources.
+    </li>
+    <li>
+      <b>Threads per node</b> – number of OpenMP threads used per node.
+      This defines the hybrid parallelization (MPI × OpenMP) setup.
+    </li>
+    <li>
+      <b>n_pool</b> – number of <code>k-point</code> or band parallelization groups
+      (<code>npool</code> in Quantum ESPRESSO). It distributes work among MPI
+      pools for better performance in large systems.
+    </li>
+  </ul>
+
+  <p>
+    For more information or to report any unexpected issue, please contact:
+    <b>Mandana Safari</b> —
+    <a href="mailto:m.safari@cineca.it">m.safari@cineca.it</a>
+  </p>
+</div>
+
+    <!--section id="help-section" style="margin-top: 30px;"--!>
+  <!--h3> Help & Instructions ❓</h3--!>
+
+  <!--details open--!>
+    <!--summary><strong>What does this predictor do?</strong></summary--!>
+	    <!--p>
+    This tool uses a trained <b>Neural Network</b> model to estimate the
+    <b>time per SCF call</b> for your <b>Quantum ESPRESSO</b> calculations.
+    The prediction is based on your QE input file, pseudopotentials, and system parameters.
+  </p--!>
+  <!--p>
+    For more information or to report any unexpected issue, please contact:
+    <b>Mandana Safari</b> —
+    <a href="mailto:m.safari@cineca.it">m.safari@cineca.it</a>
+  </p--!>
+
+  <!--/details--!>
+
+  <!--details>
+    <summary><strong>What inputs do I need to provide?</strong></summary>
+    <ul>
+      <li><b>QE input file:</b> A valid Quantum ESPRESSO input file (e.g., <code>scf.in</code>).</li>
+      <li><b>Pseudopotentials (UPF files):</b> All UPF files required by the input file must be uploaded.</li>
+      <li><b>System parameters:</b>
+        <ul>
+          <li><b>n_el:</b> Number of electrons in the system</li>
+          <li><b>n_k:</b> Number of k-points</li>
+          <li><b>n_cores:</b> Number of CPU cores used</li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      ⚠️ Make sure the input file and UPFs are consistent (all pseudopotentials
+      referenced in the input must be uploaded).
+    </p>
+  </details--!>
+
+  <!--details>
+    <summary><strong>Troubleshooting</strong></summary>
+    <p>
+      If your prediction fails with <i>"An error occurred during QE input + pseudos prediction"</i>:
+    </p>
+    <ul>
+      <li>Check that all required pseudopotentials were uploaded.</li>
+      <li>Ensure file names match exactly what is referenced in the QE input file.</li>
+      <li>If running on the cloud, the issue may be related to file upload limits or missing files in <code>/tmp</code>.</li>
+      <li>Admins can check logs on the server:
+        <pre><code>tail -f /var/log/nginx/error.log
+journalctl -u myflask.service -f</code></pre>
+      </li>
+    </ul>
+  </details--!>
+
+  <!--details>
+    <summary><strong>Tips</strong></summary>
+    <ul>
+      <li>Always verify your QE input locally before uploading.</li>
+      <li>Use descriptive names for input/UPF files to avoid overwriting.</li>
+      <li>For large test cases, check system memory and disk space on the server.</li>
+    </ul>
+  </details--!>
+
+</section>
+
+<script>
+/* 1st of Oct. 3rd edition: related to QE input botton */
+  // keep the existing variable names you already use elsewhere
+  let selectedPseudos = [];
+  let selectedQEFile = null;
+
+  // DOM references
+  const pseudoInput = document.getElementById("pseudoFiles");
+  const pseudoBtn = document.getElementById("pseudoBtn");
+  const pseudoStatus = document.getElementById("pseudoStatus");
+  const fileList = document.getElementById("fileList");
+
+  const qeInput = document.getElementById("qeFile");
+  const qeBtn = document.getElementById("qeBtn");
+  const qeStatus = document.getElementById("qeStatus");
+  const qeRemoveBtn = document.getElementById("qeRemoveBtn");
+
+  // open native pickers
+  pseudoBtn.addEventListener("click", () => pseudoInput.click());
+  qeBtn.addEventListener("click", () => qeInput.click());
+
+  // handle QE file selection
+  qeInput.addEventListener("change", (event) => {
+    const file = event.target.files[0] || null;
+    selectedQEFile = file;
+    if (file) {
+      qeStatus.textContent = file.name;
+      qeRemoveBtn.style.display = "inline-flex";
+    } else {
+      qeStatus.textContent = "";
+      qeRemoveBtn.style.display = "none";
+    }
+    // clear native input so user can re-open picker
+    event.target.value = "";
+  });
+
+  // QE remove button
+  qeRemoveBtn.addEventListener("click", () => {
+    selectedQEFile = null;
+    qeInput.value = "";
+    qeStatus.textContent = "";
+    qeRemoveBtn.style.display = "none";
+  });
+
+  // handle pseudos selection (multiple rounds)
+  pseudoInput.addEventListener("change", (event) => {
+    const newFiles = Array.from(event.target.files);
+    newFiles.forEach(file => {
+      // avoid duplicates by name
+      if (!selectedPseudos.some(f => f.name === file.name)) {
+        selectedPseudos.push(file);
+      }
+    });
+    // reset native input so user can add more later
+    event.target.value = "";
+    updateFileListAndStatus();
+  });
+
+  function updateFileListAndStatus() {
+    // update status text (empty when none)
+    if (selectedPseudos.length === 0) {
+      pseudoStatus.textContent = "";
+    } else {
+      const n = selectedPseudos.length;
+      pseudoStatus.textContent = `${n} file${n > 1 ? "s" : ""} selected`;
+    }
+
+    // render file list with remove buttons (each remove-btn uses the styled .remove-btn class)
+    fileList.innerHTML = "";
+    selectedPseudos.forEach((file, idx) => {
+      const li = document.createElement("li");
+
+      const nameSpan = document.createElement("span");
+      nameSpan.className = "name";
+      nameSpan.textContent = file.name;
+
+      const removeBtn = document.createElement("button");
+      removeBtn.type = "button";
+      removeBtn.className = "remove-btn";
+      removeBtn.title = "Remove this file";
+      removeBtn.textContent = "✖";
+
+      removeBtn.addEventListener("click", () => {
+        // remove by index and re-render
+        selectedPseudos.splice(idx, 1);
+        updateFileListAndStatus();
+      });
+
+      li.appendChild(nameSpan);
+      li.appendChild(removeBtn);
+      fileList.appendChild(li);
+    });
+  }
+
+// _________Example uploadQE that uses the same variable names you provided earlier.
+// __8OCT__Make sure this replaces the pseudoInput.files usage with selectedPseudos and uses selectedQEFile.
+
+function uploadQE() {
+  const qeFile = selectedQEFile;
+  if (!qeFile) {
+    alert("Please upload a QE input file first.");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("input_file", qeFile);
+
+  for (let i = 0; i < selectedPseudos.length; i++) {
+    formData.append("pseudos", selectedPseudos[i]);
+  }
+
+  // User-provided computational parameters
+  const nCores = parseInt(document.querySelector("input[name='n_cores']").value);
+  const nNodes = parseInt(document.querySelector("input[name='n_nodes']").value);
+  const threadsPerNode = parseInt(document.querySelector("input[name='threads_per_node']").value);
+  const nPool = parseInt(document.querySelector("input[name='n_pool']").value);
+
+  formData.append("n_cores", nCores);
+  formData.append("n_nodes", nNodes);
+  formData.append("threads_per_node", threadsPerNode);
+  formData.append("n_pool", nPool);
+
+  const selectedModel = document.getElementById("supercomputer").value;
+
+  fetch(`/predict?model=${selectedModel}`, {
+    method: "POST",
+    body: formData,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("Received this from backend:", data);
+
+      if (data.error) {
+        document.getElementById("qeResult").innerText = "Error: " + data.error;
+        return;
+      }
+
+      const parsed = data.parsed_features || {};
+
+      // Extract n_el and n_k from parsed data
+      const n_el = parseFloat(parsed["n_el"]);
+      const nkpoints = parseFloat(parsed["n_k"]);
+
+      if (isNaN(n_el) || isNaN(nkpoints)) {
+        console.error("Parsed features missing n_el or n_k");
+        document.getElementById("qeResult").innerText =
+          "Error: Missing n_el or n_k in parsed QE data.";
+        return;
+      }
+
+      const predict_time = data.prediction_time;
+      const complexity = Math.pow(n_el, 3) * nkpoints / nCores;
+      const real_time = predict_time * complexity;
+
+      document.getElementById("qeResult").innerHTML = `
+        <strong>Prediction Result from QE input</strong><br>
+        <ul>
+          <li><b>Supercomputer Model:</b> ${selectedModel}</li>
+          <li><b>Neural Network Output:</b> Normalized time per call predicted by the model</li>
+          <li><b>n_el (from QE+pseudos):</b> ${n_el}</li>
+          <li><b>n_k (from QE input):</b> ${nkpoints}</li>
+          <li><b>Calculated Computational Complexity:</b> ${complexity.toExponential(2)}</li>
+          <li><b><u>Estimated Time per Call:</u></b> 
+            <span style="color: green;">${real_time.toExponential(2)} seconds</span></li>
+          <li><b>Parsed Features:</b>
+            <pre>${JSON.stringify(parsed, null, 2)}</pre>
+          </li>
+        </ul>
+      `;
+    })
+    .catch((err) => {
+      console.error("Upload error:", err);
+      document.getElementById("qeResult").innerText =
+        "An error occurred during QE input + pseudos prediction.";
+    });
+}
+
+
+///
+function uploadData() {
+    const form = document.getElementById("predictionForm");
+    const formData = new FormData(form);
+    let data = {};
+
+        // Convert form data to JSON
+        formData.forEach((value, key) => {
+          data[key] = parseFloat(value); // Convert input values to float     
+       });
+
+       // Extract required inputs for complexity
+        const n_el = data["n_el"];
+        const nkpoints = data["n_k"];
+        const ncores = data["n_cores"];
+
+
+  if (isNaN(n_el) || isNaN(nkpoints) || isNaN(ncores)) {
+    console.error("Missing or invalid complexity inputs");
+    return;
+  }
+
+  const complexity = Math.pow(n_el, 3) * nkpoints / ncores;
+
+  // Debug logs
+  console.log("==== DEBUG: Upload Data Mode ====");
+  console.log("Form Data:", data);
+  console.log("n_el:", n_el);
+  console.log("nkpoints:", nkpoints);
+  console.log("ncores:", ncores);
+  console.log("Complexity:", complexity);
+      
+        // Attach selected supercomputer separately in the query
+       const selectedModel = document.getElementById("supercomputer").value;
+
+      fetch(`/predict?model=${selectedModel}`, {
+       method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+       })
+        .then((response) => response.json())
+        .then((data) => {
+	  console.log("Received this from backend:", data);
+          const predict_time = data.prediction_time;
+          console.log("prediction_time:", predict_time);
+          const real_time = predict_time * complexity;
+
+  document.getElementById("result").innerHTML =`
+  <strong>Prediction Result</strong><br>
+  <ul>
+    <li><b>Supercomputer Model:</b> ${selectedModel}</li>
+    <li><b>Neural Network Output:</b> Normalized time per call predicted by the model</li>
+    <li><b>Calculated Computational Complexity:</b> ${complexity.toExponential(2)}</li>
+    <li><b><u>Estimated Time per Call:</u></b> <span style="color: green;">${real_time.toExponential(2)} seconds</span></li>
+  </ul>
+`;
+  //  `Prediction time: ${real_time.toFixed(4)} seconds`;
+       })
+       .catch((error) => {
+        console.error("Error:", error);
+        document.getElementById("result").innerText = "An error occurred during prediction.";
+       });
+      }
+
+    function uploadFromFile() {
+      const fileInput = document.getElementById("jsonFile");
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        try {
+          const data = JSON.parse(e.target.result);
+          fetch("/predict", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+               document.getElementById("result").innerText =
+                "Predicted time: " + data.prediction;
+                
+                let system = data.supercomputer || data.input?.supercomputer;
+                let infoBox = "";
+
+                if (system === "leonardo") {
+                  infoBox =
+                     " Prediction based on a neural network trained with X simulations on the Leonardo Booster at CINECA.";
+                } else if (system === "galileo") {
+                  infoBox =
+                     " Prediction based on a neural network trained with Y simulations on the Galileo100 supercomputer.";
+                } else if (system === "marconi") {
+                  infoBox =
+                     " Prediction based on a neural network trained with Z simulations on Marconi100.";
+                } else {
+                 infoBox = "Supercomputer not recognized.";
+                }
+
+               document.getElementById("systemInfo").innerText = infoBox;
+          });
+        } catch (err) {
+          alert("Invalid JSON file");
+       }
+     };
+     reader.readAsText(file);
+    }
+     
+    </script>
+  </body>
+</html>
+
+{% endblock %}
